@@ -3,6 +3,7 @@ module com.example.monopoly {
     requires javafx.fxml;
 
     requires org.kordamp.bootstrapfx.core;
+	requires javafx.graphics;
 
     opens com.example.monopoly to javafx.fxml;
     exports com.example.monopoly;
