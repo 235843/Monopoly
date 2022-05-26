@@ -3,7 +3,7 @@ package com.example.monopoly;
 public class CardInfo {
 	String name;
 	Integer cost;
-	static Integer id;
+	Integer id;
 	Integer familyId;
 	Integer positionX;
 	Integer posiotionY;
@@ -16,7 +16,6 @@ public class CardInfo {
 		this.positionX = positionX;
 		this.posiotionY = positionY;
 	}
-	
 	
 	
 }

@@ -1,6 +1,7 @@
 package com.example.monopoly;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -42,7 +43,6 @@ public class GameHandler {
 			cards.add(new CardInfo("x", 10, id, id, x, i));
 			id++;
 		}
-		//int players_num = 1;
 		players.add(new PlayerInfo(0, 0));
 		gridpane.add(players.get(0).pawn, 11, 11);
 		players.get(0).pawn.setCenterX(5);
@@ -54,9 +54,12 @@ public class GameHandler {
 	
 	
 
-	public int randDice() {
-		System.out.println("Xxxx");
-		
-		return 1;
+	public void randDice() {
+		Random rand = new Random();
+		int x = rand.nextInt(6);
+		x += 1;
+		players.get(0).changePosition(x, cards);
 	}
+	
+	
 }

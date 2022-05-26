@@ -49,7 +49,7 @@
 
 <VBox alignment="CENTER" prefHeight="814.0" prefWidth="1068.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.monopoly.GameHandler">
     <children>
-      <GridPane alignment="CENTER" gridLinesVisible="true" fx:id="gridpane" prefHeight="1201.0" prefWidth="865.0" VBox.vgrow="ALWAYS">
+      <GridPane fx:id="gridpane" alignment="CENTER" gridLinesVisible="true" prefHeight="1201.0" prefWidth="865.0" VBox.vgrow="ALWAYS">
         <columnConstraints>
             <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="-Infinity" />
             <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="-Infinity" />
