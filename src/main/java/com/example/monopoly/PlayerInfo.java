@@ -24,7 +24,6 @@ public class PlayerInfo {
 		this.pawn.setId(this.id.toString());
 	}
 	
-//ADA 
 	public void changePosition(int newPos, ArrayList<CardInfo> cards) {
 		int x, y, count;
 		for(int i = 0; i < 40; i++) {
@@ -41,8 +40,6 @@ public class PlayerInfo {
 				this.position = card.id;
 				break;
 			}
-		}
-		
-		System.out.println(GridPane.getColumnIndex(this.pawn));
+		}	
 	}
 }

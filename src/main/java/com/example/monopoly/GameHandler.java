@@ -3,8 +3,10 @@ package com.example.monopoly;
 import java.util.ArrayList;
 import java.util.Random;
 
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
@@ -22,25 +24,25 @@ public class GameHandler {
 		int x = 11;
 		int y = 11;
 		for(int i = x; i > 0; i--) {
-			cards.add(new CardInfo("x", 10, id, id, i, y));
+			cards.add(new CardInfo("x", 10, id, id, i, y, getNodeByRowColumnIndex(i, y, id)));
 			id++;
 		}
 		x = 1;
 		y--;
 		for(int i = y; i > 0; i--) {
-			cards.add(new CardInfo("x", 10, id, id, x, i));
+			cards.add(new CardInfo("x", 10, id, id, x, i, getNodeByRowColumnIndex(x, i, id)));
 			id++;
 		}
 		y = 1;
 		x = 2;
 		for(int i = x; i < 12; i++) {
-			cards.add(new CardInfo("x", 10, id, id, i, y));
+			cards.add(new CardInfo("x", 10, id, id, i, y, getNodeByRowColumnIndex(i, y, id)));
 			id++;
 		}
 		x = 11;
 		y = 2;
-		for(int i = y; i < 12; i++) {
-			cards.add(new CardInfo("x", 10, id, id, x, i));
+		for(int i = y; i < 11; i++) {
+			cards.add(new CardInfo("x", 10, id, id, x, i, getNodeByRowColumnIndex(x, i, id)));
 			id++;
 		}
 		players.add(new PlayerInfo(0, 0));
@@ -50,6 +52,21 @@ public class GameHandler {
 		
 	}
 	
+	public Node getNodeByRowColumnIndex (final int row, final int column, final Integer id) {
+	    Node result = null;
+	    ObservableList<Node> childrens = gridpane.getChildren();
+
+	    for (Node node : childrens) {
+	        if(GridPane.getRowIndex(node) == row && GridPane.getColumnIndex(node) == column) {
+	            result = node;
+	            node.setId(id.toString());
+	            break;
+	        }
+	        
+	    }
+
+	    return result;
+	}
 	
 	
 	
