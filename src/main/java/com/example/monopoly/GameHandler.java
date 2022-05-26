@@ -7,7 +7,9 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
@@ -49,17 +51,20 @@ public class GameHandler {
 		gridpane.add(players.get(0).pawn, 11, 11);
 		players.get(0).pawn.setCenterX(5);
 		
+		for(int i = 0; i < id; i++) {
+			System.out.println(cards.get(i).anchorPane.getChildren());
+		}
 		
 	}
 	
-	public Node getNodeByRowColumnIndex (final int row, final int column, final Integer id) {
-	    Node result = null;
+	public AnchorPane getNodeByRowColumnIndex (final int row, final int column, final Integer id) {
+		AnchorPane result = null;
 	    ObservableList<Node> childrens = gridpane.getChildren();
 
 	    for (Node node : childrens) {
-	        if(GridPane.getRowIndex(node) == row && GridPane.getColumnIndex(node) == column) {
-	            result = node;
-	            node.setId(id.toString());
+	        if(node instanceof AnchorPane && GridPane.getRowIndex(node) == row && GridPane.getColumnIndex(node) == column) {
+	            result = (AnchorPane)node;
+	            result.setId(id.toString());
 	            break;
 	        }
 	        

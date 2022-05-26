@@ -201,16 +201,6 @@
                             </LinearGradient>
                         </fill>
                     </Rectangle>
-            <Text strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER" GridPane.columnIndex="11" GridPane.rowIndex="6">
-               <font>
-                  <Font size="8.0" />
-               </font>
-            </Text>
-            <Text strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER" GridPane.columnIndex="11" GridPane.rowIndex="5">
-               <font>
-                  <Font size="8.0" />
-               </font>
-            </Text>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="63.0" stroke="BLACK" strokeType="INSIDE" width="107.0" GridPane.columnIndex="11" GridPane.rowIndex="4" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" height="59.0" stroke="BLACK" strokeType="INSIDE" width="107.0" GridPane.columnIndex="11" GridPane.rowIndex="9">
                <fill>
@@ -551,29 +541,6 @@
                   </LinearGradient>
                </fill>
             </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
-               <fill>
-                  <LinearGradient endX="0.4928909952606635" endY="0.7256601218686528" startX="0.4928909952606635" startY="0.7209207853757617">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
-                           </color>
-                        </Stop>
-                        <Stop offset="0.006711409395973154">
-                           <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color red="0.9736841917037964" green="0.925000011920929" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </LinearGradient>
-               </fill>
-            </Rectangle>
             <Button mnemonicParsing="false" onAction="#randDice" text="Button" GridPane.columnIndex="12" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.vgrow="ALWAYS" />
             <AnchorPane prefHeight="103.0" prefWidth="76.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <children>
@@ -701,6 +668,29 @@
             </AnchorPane>
             <AnchorPane prefHeight="33.0" prefWidth="51.0" GridPane.columnIndex="8" GridPane.rowIndex="1">
                <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0">
+                     <fill>
+                        <LinearGradient endX="0.4928909952606635" endY="0.7256601218686528" startX="0.4928909952606635" startY="0.7209207853757617">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.006711409395973154">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.9736841917037964" green="0.925000011920929" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Rectangle>
                   <Text layoutY="58.0" rotate="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Maszyn Przepływowych " textAlignment="CENTER" wrappingWidth="58.5159912109375">
                      <font>
                         <Font size="7.0" />
