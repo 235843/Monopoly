@@ -47,41 +47,41 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox alignment="CENTER" prefHeight="1184.0" prefWidth="1240.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.monopoly.GameHandler">
+<VBox alignment="CENTER" prefHeight="814.0" prefWidth="1068.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.monopoly.GameHandler">
     <children>
-      <GridPane fx:id="gridpane" alignment="CENTER" gridLinesVisible="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="829.0" prefWidth="1087.0" VBox.vgrow="ALWAYS">
+      <GridPane alignment="CENTER" gridLinesVisible="true" prefHeight="1201.0" prefWidth="865.0" VBox.vgrow="ALWAYS">
         <columnConstraints>
             <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="-Infinity" />
             <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="-Infinity" />
-            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="120.0" minWidth="60.0" percentWidth="6.0" prefWidth="61.0" />
-            <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="60.0" percentWidth="6.0" prefWidth="61.0" />
-            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="60.0" percentWidth="6.0" prefWidth="61.0" />
-            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="60.0" percentWidth="6.0" prefWidth="61.0" />
-            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="60.0" percentWidth="6.0" prefWidth="61.0" />
-            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="60.0" percentWidth="6.0" prefWidth="61.0" />
-            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="60.0" percentWidth="6.0" prefWidth="61.0" />
-          <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="60.0" percentWidth="6.0" prefWidth="61.0" />
-          <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="60.0" percentWidth="6.0" prefWidth="61.0" />
-            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="103.0" prefWidth="103.0" />
-            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="-Infinity" />
+            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="-Infinity" />
+            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="-Infinity" />
+            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="-Infinity" />
+            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="-Infinity" />
+            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="-Infinity" />
+            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="-Infinity" />
+          <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="-Infinity" />
+          <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="-Infinity" />
+            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="-Infinity" />
             <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
         <rowConstraints>
             <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" valignment="CENTER" vgrow="ALWAYS" />
-            <RowConstraints maxHeight="-Infinity" percentHeight="8.0" valignment="CENTER" vgrow="ALWAYS" />
-            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" percentHeight="6.0" valignment="CENTER" vgrow="ALWAYS" />
-            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" percentHeight="6.0" valignment="CENTER" vgrow="ALWAYS" />
-            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" percentHeight="6.0" valignment="CENTER" vgrow="ALWAYS" />
-            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" percentHeight="6.0" valignment="CENTER" vgrow="ALWAYS" />
-            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" percentHeight="6.0" valignment="CENTER" vgrow="ALWAYS" />
-            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" percentHeight="6.0" valignment="CENTER" vgrow="ALWAYS" />
-            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" percentHeight="6.0" valignment="CENTER" vgrow="ALWAYS" />
-          <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" percentHeight="6.0" valignment="CENTER" vgrow="ALWAYS" />
-          <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" percentHeight="6.0" valignment="CENTER" vgrow="ALWAYS" />
-            <RowConstraints maxHeight="203.0" minHeight="103.0" percentHeight="8.0" prefHeight="103.0" valignment="CENTER" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="-Infinity" valignment="CENTER" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" valignment="CENTER" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" valignment="CENTER" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" valignment="CENTER" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" valignment="CENTER" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" valignment="CENTER" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" valignment="CENTER" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" valignment="CENTER" vgrow="ALWAYS" />
+          <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" valignment="CENTER" vgrow="ALWAYS" />
+          <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" valignment="CENTER" vgrow="ALWAYS" />
+          <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" valignment="CENTER" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" valignment="CENTER" vgrow="ALWAYS" />
         </rowConstraints>
          <children>
-                    <Rectangle arcHeight="5.0" arcWidth="5.0" cache="true" cacheHint="SCALE" height="103.0" smooth="false" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER">
+                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="12" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                         <fill>
                             <LinearGradient endX="0.4928909952606635" endY="0.28016249153689915" startX="0.4928909952606635" startY="0.29911983750846305">
                                 <stops>
@@ -104,10 +104,10 @@
                             </LinearGradient>
                         </fill>
                     </Rectangle>
-                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="103.0" stroke="BLACK" strokeType="INSIDE" width="107.0" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="103.0" stroke="BLACK" strokeType="INSIDE" width="103.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="103.0" stroke="BLACK" strokeType="INSIDE" width="107.0" GridPane.columnIndex="11" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="12" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="103.0" stroke="BLACK" strokeType="INSIDE" width="103.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="12" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="12" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="12" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                         <fill>
                             <LinearGradient endX="0.4928909952606635" endY="0.28016249153689915" startX="0.4928909952606635" startY="0.29911983750846305">
                                 <stops>
@@ -130,8 +130,8 @@
                             </LinearGradient>
                         </fill>
                     </Rectangle>
-                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="6" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="5" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="6" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="12" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="5" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="12" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                         <fill>
                             <LinearGradient endX="0.4928909952606635" endY="0.28016249153689915" startX="0.4928909952606635" startY="0.29911983750846305">
                                 <stops>
@@ -154,9 +154,9 @@
                             </LinearGradient>
                         </fill>
                     </Rectangle>
-                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="7" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="9" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="10" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="7" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="12" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="9" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="12" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="10" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="12" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                         <fill>
                             <LinearGradient endX="0.4928909952606635" endY="0.28016249153689915" startX="0.4928909952606635" startY="0.29911983750846305">
                                 <stops>
@@ -179,7 +179,7 @@
                             </LinearGradient>
                         </fill>
                     </Rectangle>
-                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="8" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="8" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="12" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                         <fill>
                             <LinearGradient endX="0.4928909952606635" endY="0.28016249153689915" startX="0.4928909952606635" startY="0.29911983750846305">
                                 <stops>
@@ -202,8 +202,18 @@
                             </LinearGradient>
                         </fill>
                     </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="63.0" stroke="BLACK" strokeType="INSIDE" width="107.0" GridPane.columnIndex="11" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" height="59.0" stroke="BLACK" strokeType="INSIDE" width="107.0" GridPane.columnIndex="11" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+            <Text strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER" GridPane.columnIndex="11" GridPane.rowIndex="6">
+               <font>
+                  <Font size="8.0" />
+               </font>
+            </Text>
+            <Text strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER" GridPane.columnIndex="11" GridPane.rowIndex="5">
+               <font>
+                  <Font size="8.0" />
+               </font>
+            </Text>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="63.0" stroke="BLACK" strokeType="INSIDE" width="107.0" GridPane.columnIndex="11" GridPane.rowIndex="4" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="59.0" stroke="BLACK" strokeType="INSIDE" width="107.0" GridPane.columnIndex="11" GridPane.rowIndex="10">
                <fill>
                   <LinearGradient endX="0.3175355450236967" endY="1.0" startX="0.30331753554502366" startY="1.0">
                      <stops>
@@ -221,8 +231,8 @@
                   </LinearGradient>
                </fill>
             </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" height="59.0" stroke="BLACK" strokeType="INSIDE" width="106.0" GridPane.columnIndex="11" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="59.0" stroke="BLACK" strokeType="INSIDE" width="106.0" GridPane.columnIndex="11" GridPane.rowIndex="8">
                <fill>
                   <LinearGradient endX="0.3175355450236967" endY="1.0" startX="0.30331753554502366" startY="1.0">
                      <stops>
@@ -240,8 +250,8 @@
                   </LinearGradient>
                </fill>
             </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" height="63.0" stroke="BLACK" strokeType="INSIDE" width="106.0" GridPane.columnIndex="11" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="63.0" stroke="BLACK" strokeType="INSIDE" width="106.0" GridPane.columnIndex="11" GridPane.rowIndex="5">
                <fill>
                   <LinearGradient endX="0.3175355450236967" endY="1.0" startX="0.30331753554502366" startY="1.0">
                      <stops>
@@ -259,7 +269,7 @@
                   </LinearGradient>
                </fill>
             </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" height="59.0" stroke="BLACK" strokeType="INSIDE" width="106.0" GridPane.columnIndex="11" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="59.0" stroke="BLACK" strokeType="INSIDE" width="106.0" GridPane.columnIndex="11" GridPane.rowIndex="3">
                <fill>
                   <LinearGradient endX="0.3175355450236967" endY="1.0" startX="0.30331753554502366" startY="1.0">
                      <stops>
@@ -277,7 +287,7 @@
                   </LinearGradient>
                </fill>
             </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" height="59.0" stroke="BLACK" strokeType="INSIDE" width="106.0" GridPane.columnIndex="11" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="59.0" stroke="BLACK" strokeType="INSIDE" width="106.0" GridPane.columnIndex="11" GridPane.rowIndex="2">
                <fill>
                   <LinearGradient endX="0.3175355450236967" endY="1.0" startX="0.30331753554502366" startY="1.0">
                      <stops>
@@ -295,10 +305,10 @@
                   </LinearGradient>
                </fill>
             </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" stroke="BLACK" strokeType="INSIDE" width="106.0" GridPane.columnIndex="11" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="103.0" rotate="180.0" stroke="BLACK" strokeType="INSIDE" width="106.0" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" stroke="BLACK" strokeType="INSIDE" width="106.0" GridPane.columnIndex="11" GridPane.rowIndex="9" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="103.0" rotate="180.0" stroke="BLACK" strokeType="INSIDE" width="106.0" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
                <fill>
                   <LinearGradient endX="0.4928909952606635" endY="0.7256601218686528" startX="0.4928909952606635" startY="0.7209207853757617">
                      <stops>
@@ -321,9 +331,9 @@
                   </LinearGradient>
                </fill>
             </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="59.0" stroke="BLACK" strokeType="INSIDE" width="106.0" GridPane.columnIndex="11" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="63.0" stroke="BLACK" strokeType="INSIDE" width="107.0" GridPane.columnIndex="11" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="59.0" stroke="BLACK" strokeType="INSIDE" width="106.0" GridPane.columnIndex="11" GridPane.rowIndex="6" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="63.0" stroke="BLACK" strokeType="INSIDE" width="107.0" GridPane.columnIndex="11" GridPane.rowIndex="7" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
                <fill>
                   <LinearGradient endX="0.4928909952606635" endY="0.7351387948544349" startX="0.4928909952606635" startY="0.7156398104265403">
                      <stops>
@@ -346,7 +356,7 @@
                   </LinearGradient>
                </fill>
             </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
                <fill>
                   <LinearGradient endX="0.4928909952606635" endY="0.7351387948544349" startX="0.4928909952606635" startY="0.7156398104265403">
                      <stops>
@@ -369,7 +379,7 @@
                   </LinearGradient>
                </fill>
             </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
                <fill>
                   <LinearGradient endX="0.4928909952606635" endY="0.7351387948544349" startX="0.4928909952606635" startY="0.7156398104265403">
                      <stops>
@@ -393,7 +403,7 @@
                </fill>
             </Rectangle>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="62.0" stroke="BLACK" strokeType="INSIDE" width="103.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="103.0" stroke="BLACK" strokeType="INSIDE" width="103.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="103.0" stroke="BLACK" strokeType="INSIDE" width="103.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" height="59.0" stroke="BLACK" strokeType="INSIDE" width="103.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                <fill>
                   <LinearGradient endX="0.7109004739336493" endY="1.0" startX="0.7156398104265402" startY="1.0">
@@ -449,7 +459,7 @@
                   </LinearGradient>
                </fill>
             </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="59.0" stroke="BLACK" strokeType="INSIDE" width="103.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="59.0" stroke="BLACK" strokeType="INSIDE" width="103.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" height="59.0" stroke="BLACK" strokeType="INSIDE" width="103.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
                <fill>
                     <LinearGradient endX="0.7109004739336493" endY="1.0" startX="0.7156398104265402" startY="1.0">
@@ -496,7 +506,7 @@
                   </LinearGradient>
                </fill>
             </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" height="59.0" stroke="BLACK" strokeType="INSIDE" width="103.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="9" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="59.0" stroke="BLACK" strokeType="INSIDE" width="103.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="10" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <fill>
                   <LinearGradient endX="0.7109004739336493" endY="1.0" startX="0.7156398104265402" startY="1.0">
                      <stops>
@@ -519,7 +529,7 @@
                   </LinearGradient>
                </fill>
             </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
                <fill>
                   <LinearGradient endX="0.4928909952606635" endY="0.7256601218686528" startX="0.4928909952606635" startY="0.7209207853757617">
                      <stops>
@@ -542,8 +552,31 @@
                   </LinearGradient>
                </fill>
             </Rectangle>
-            <Button mnemonicParsing="false" onAction="#randDice" text="Button" GridPane.columnIndex="12" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.vgrow="ALWAYS" />
-            <AnchorPane GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
+               <fill>
+                  <LinearGradient endX="0.4928909952606635" endY="0.7256601218686528" startX="0.4928909952606635" startY="0.7209207853757617">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.006711409395973154">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.9736841917037964" green="0.925000011920929" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Button mnemonicParsing="false" onAction="#randDice" text="Button" GridPane.columnIndex="12" GridPane.hgrow="ALWAYS" GridPane.rowIndex="12" GridPane.vgrow="ALWAYS" />
+            <AnchorPane prefHeight="103.0" prefWidth="76.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <children>
                   <Text layoutX="8.0" layoutY="40.0" rotate="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Biblioteka" textAlignment="CENTER" wrappingWidth="52.916015625" />
                   <ImageView fitHeight="51.0" fitWidth="58.0" layoutX="33.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true" rotate="135.0">
@@ -553,7 +586,7 @@
                   </ImageView>
                </children>
             </AnchorPane>
-            <AnchorPane GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+            <AnchorPane prefHeight="96.0" prefWidth="59.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <children>
                   <Text layoutX="3.0" layoutY="51.0" rotate="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Architektury Tekstyliów " textAlignment="CENTER" wrappingWidth="52.916015625">
                      <font>
@@ -572,7 +605,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane GridPane.columnIndex="3" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+            <AnchorPane prefHeight="98.0" prefWidth="48.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
                <children>
                   <ImageView fitHeight="74.0" fitWidth="34.0" layoutX="12.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
                      <image>
@@ -586,7 +619,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane GridPane.columnIndex="4" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+            <AnchorPane prefHeight="94.0" prefWidth="54.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
                <children>
                   <Text layoutX="3.0" layoutY="34.0" rotate="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Materiałoznawstwa Tekstyliów i Kompozytów Polimerowych" textAlignment="CENTER" wrappingWidth="52.916015625">
                      <font>
@@ -605,7 +638,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane GridPane.columnIndex="5" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+            <AnchorPane prefHeight="103.0" prefWidth="59.0" GridPane.columnIndex="5" GridPane.rowIndex="1">
                <children>
                   <Text layoutX="32.0" layoutY="12.0" rotate="180.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER">
                      <font>
@@ -624,7 +657,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane GridPane.columnIndex="6" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+            <AnchorPane prefHeight="103.0" prefWidth="59.0" GridPane.columnIndex="6" GridPane.rowIndex="1">
                <children>
                   <Text layoutX="16.0" layoutY="12.0" rotate="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="200">
                      <font>
@@ -648,7 +681,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane GridPane.columnIndex="7" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+            <AnchorPane prefHeight="48.0" prefWidth="37.0" GridPane.columnIndex="7" GridPane.rowIndex="1">
                <children>
                   <Text layoutX="18.0" layoutY="12.0" rotate="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="260">
                      <font>
@@ -667,31 +700,8 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane GridPane.columnIndex="8" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+            <AnchorPane prefHeight="33.0" prefWidth="51.0" GridPane.columnIndex="8" GridPane.rowIndex="1">
                <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0">
-                     <fill>
-                        <LinearGradient endX="0.4928909952606635" endY="0.7256601218686528" startX="0.4928909952606635" startY="0.7209207853757617">
-                           <stops>
-                              <Stop>
-                                 <color>
-                                    <Color red="1.0" green="1.0" blue="1.0" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="0.006711409395973154">
-                                 <color>
-                                    <Color red="1.0" green="1.0" blue="1.0" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="1.0">
-                                 <color>
-                                    <Color red="0.9736841917037964" green="0.925000011920929" />
-                                 </color>
-                              </Stop>
-                           </stops>
-                        </LinearGradient>
-                     </fill>
-                  </Rectangle>
                   <Text layoutY="58.0" rotate="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Maszyn Przepływowych " textAlignment="CENTER" wrappingWidth="58.5159912109375">
                      <font>
                         <Font size="7.0" />
@@ -709,7 +719,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane GridPane.columnIndex="9" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+            <AnchorPane prefHeight="103.0" prefWidth="57.0" GridPane.columnIndex="9" GridPane.rowIndex="1">
                <children>
                   <ImageView fitHeight="51.0" fitWidth="56.0" layoutX="4.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
                      <image>
@@ -733,7 +743,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane GridPane.columnIndex="10" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+            <AnchorPane prefHeight="56.0" prefWidth="48.0" GridPane.columnIndex="10" GridPane.rowIndex="1">
                <children>
                   <Text layoutX="4.0" layoutY="41.0" rotate="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Katedra Automatyki, Biomechaniki i Mechatroniki" textAlignment="CENTER" wrappingWidth="50.5159912109375">
                      <font>
@@ -752,7 +762,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane GridPane.columnIndex="11" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+            <AnchorPane prefHeight="103.0" prefWidth="103.0" GridPane.columnIndex="11" GridPane.rowIndex="1">
                <children>
                   <ImageView fitHeight="52.0" fitWidth="59.0" layoutX="14.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true" rotate="225.0">
                      <image>
@@ -762,7 +772,7 @@
                   <Text layoutX="42.0" layoutY="30.0" rotate="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Idź na poprawkę" textAlignment="CENTER" wrappingWidth="52.916015625" />
                </children>
             </AnchorPane>
-            <AnchorPane GridPane.columnIndex="11" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS">
+            <AnchorPane prefHeight="51.0" prefWidth="73.0" GridPane.columnIndex="11" GridPane.rowIndex="3">
                <children>
                   <Text layoutX="19.0" layoutY="29.0" rotate="-90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Automatyki " textAlignment="CENTER" wrappingWidth="52.916015625">
                      <font>
@@ -781,7 +791,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane GridPane.columnIndex="11" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
+            <AnchorPane prefHeight="47.0" prefWidth="49.0" GridPane.columnIndex="11" GridPane.rowIndex="2">
                <children>
                   <Text layoutX="18.0" layoutY="29.0" rotate="-90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Elektroniki" textAlignment="CENTER" wrappingWidth="52.916015625">
                      <font>
@@ -800,7 +810,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane GridPane.columnIndex="11" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.vgrow="ALWAYS">
+            <AnchorPane prefHeight="63.0" prefWidth="98.0" GridPane.columnIndex="11" GridPane.rowIndex="4">
                <children>
                   <ImageView fitHeight="55.0" fitWidth="53.0" layoutX="9.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0">
                      <image>
@@ -814,7 +824,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane GridPane.columnIndex="11" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.vgrow="ALWAYS">
+            <AnchorPane prefHeight="49.0" prefWidth="103.0" GridPane.columnIndex="11" GridPane.rowIndex="5">
                <children>
                   <Text layoutX="23.0" layoutY="25.0" rotate="-90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Informatyki Stosowanej " textAlignment="CENTER" wrappingWidth="52.916015625">
                      <font>
@@ -833,7 +843,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane GridPane.columnIndex="11" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.vgrow="ALWAYS">
+            <AnchorPane prefHeight="32.0" prefWidth="103.0" GridPane.columnIndex="11" GridPane.rowIndex="6">
                <children>
                   <Text layoutX="-8.0" layoutY="23.0" rotate="-90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Centrum Technologii Informatych" textAlignment="CENTER" wrappingWidth="58.916015625">
                      <font>
@@ -857,7 +867,7 @@
                   </ImageView>
                </children>
             </AnchorPane>
-            <AnchorPane GridPane.columnIndex="11" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.vgrow="ALWAYS">
+            <AnchorPane prefHeight="43.0" prefWidth="103.0" GridPane.columnIndex="11" GridPane.rowIndex="7">
                <children>
                   <ImageView fitHeight="62.0" fitWidth="40.0" layoutX="19.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0">
                      <image>
@@ -871,7 +881,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane GridPane.columnIndex="11" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8" GridPane.vgrow="ALWAYS">
+            <AnchorPane prefHeight="59.0" prefWidth="104.0" GridPane.columnIndex="11" GridPane.rowIndex="8">
                <children>
                   <Text layoutX="89.0" layoutY="27.0" rotate="-90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="350">
                      <font>
@@ -890,7 +900,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane GridPane.columnIndex="11" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.vgrow="ALWAYS">
+            <AnchorPane prefHeight="52.0" prefWidth="54.0" GridPane.columnIndex="11" GridPane.rowIndex="12">
                <children>
                   <ImageView fitHeight="46.0" fitWidth="44.0" layoutX="59.0" layoutY="54.0">
                      <image>
@@ -909,7 +919,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane GridPane.columnIndex="11" GridPane.hgrow="ALWAYS" GridPane.rowIndex="10" GridPane.vgrow="ALWAYS">
+            <AnchorPane prefHeight="38.0" prefWidth="45.0" GridPane.columnIndex="11" GridPane.rowIndex="9">
                <children>
                   <Text layoutX="45.0" layoutY="28.0" rotate="-90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Opłata za legitymację" textAlignment="CENTER" wrappingWidth="52.916015625">
                      <font>
@@ -933,7 +943,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane GridPane.columnIndex="9" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.vgrow="ALWAYS">
+            <AnchorPane prefHeight="17.0" prefWidth="50.0" GridPane.columnIndex="9" GridPane.rowIndex="12">
                <children>
                   <Text layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="  Pomoc starszego roku" textAlignment="CENTER" wrappingWidth="58.916015625">
                      <font>
@@ -947,7 +957,7 @@
                   </ImageView>
                </children>
             </AnchorPane>
-            <AnchorPane GridPane.columnIndex="8" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.vgrow="ALWAYS">
+            <AnchorPane prefHeight="26.0" prefWidth="40.0" GridPane.columnIndex="8" GridPane.rowIndex="12">
                <children>
                   <Text layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Katedra Inżynierii Środowiska" textAlignment="CENTER" wrappingWidth="58.916015625">
                      <font>
@@ -966,7 +976,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane GridPane.columnIndex="7" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.vgrow="ALWAYS">
+            <AnchorPane prefHeight="22.0" prefWidth="38.0" GridPane.columnIndex="7" GridPane.rowIndex="12">
                <children>
                   <Text layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Zaległe zajęcia  WF" textAlignment="CENTER" wrappingWidth="58.916015625">
                      <font>
@@ -990,7 +1000,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane GridPane.columnIndex="6" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.vgrow="ALWAYS">
+            <AnchorPane prefHeight="18.0" prefWidth="43.0" GridPane.columnIndex="6" GridPane.rowIndex="12">
                <children>
                   <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="6.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -1014,7 +1024,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane GridPane.columnIndex="4" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.vgrow="ALWAYS">
+            <AnchorPane prefHeight="19.0" prefWidth="39.0" GridPane.columnIndex="4" GridPane.rowIndex="12">
                <children>
                   <ImageView fitHeight="74.0" fitWidth="34.0" layoutX="14.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -1028,7 +1038,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane GridPane.columnIndex="3" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.vgrow="ALWAYS">
+            <AnchorPane prefHeight="32.0" prefWidth="34.0" GridPane.columnIndex="3" GridPane.rowIndex="12">
                <children>
                   <Text layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Nauk Społecznych i Zarządzania Technologiami" textAlignment="CENTER" wrappingWidth="58.916015625">
                      <font>
@@ -1047,7 +1057,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane maxHeight="206.0" maxWidth="120.0" minHeight="103.0" minWidth="60.0" prefHeight="103.0" prefWidth="60.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <AnchorPane prefHeight="42.0" prefWidth="35.0" GridPane.columnIndex="2" GridPane.rowIndex="12">
                <children>
                   <Text layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Katedra Zarządzania Produkcją i Logistyki" textAlignment="CENTER" wrappingWidth="58.916015625">
                      <font>
@@ -1066,7 +1076,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.vgrow="ALWAYS">
+            <AnchorPane prefHeight="103.0" prefWidth="89.0" GridPane.columnIndex="1" GridPane.rowIndex="12">
                <children>
                   <Text layoutX="6.0" layoutY="72.0" rotate="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Poprawka" textAlignment="CENTER" wrappingWidth="63.52261924743652" />
                   <ImageView fitHeight="54.0" fitWidth="53.0" layoutX="38.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" rotate="45.0">
@@ -1076,7 +1086,7 @@
                   </ImageView>
                </children>
             </AnchorPane>
-            <AnchorPane GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="9" GridPane.vgrow="ALWAYS">
+            <AnchorPane prefHeight="28.0" prefWidth="39.0" GridPane.columnIndex="1" GridPane.rowIndex="10">
                <children>
                   <Text layoutX="31.0" layoutY="24.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Katedra Mechaniki Materiałów " textAlignment="CENTER" wrappingWidth="52.916015625">
                      <font>
@@ -1095,7 +1105,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="10" GridPane.vgrow="ALWAYS">
+            <AnchorPane prefHeight="34.0" prefWidth="40.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
                <children>
                   <ImageView fitHeight="45.0" fitWidth="57.0" layoutX="45.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
                      <image>
@@ -1119,7 +1129,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8" GridPane.vgrow="ALWAYS">
+            <AnchorPane prefHeight="59.0" prefWidth="86.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
                <children>
                   <Text layoutX="31.0" layoutY="23.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Architektury i Urbanistyki" textAlignment="CENTER" wrappingWidth="52.916015625">
                      <font>
@@ -1138,7 +1148,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.vgrow="ALWAYS">
+            <AnchorPane prefHeight="54.0" prefWidth="96.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
                <children>
                   <Text layoutX="26.0" layoutY="16.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Inżynierii Środowiska i Instalacji Budowlanych " textAlignment="CENTER" wrappingWidth="45.642181396484375">
                      <font>
@@ -1157,7 +1167,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.vgrow="ALWAYS">
+            <AnchorPane prefHeight="59.0" prefWidth="90.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
                <children>
                   <ImageView fitHeight="47.0" fitWidth="40.0" layoutX="21.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -1181,7 +1191,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.vgrow="ALWAYS">
+            <AnchorPane prefHeight="55.0" prefWidth="77.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
                <children>
                   <Text layoutX="32.0" layoutY="25.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Technologii i Analizy Żywności" textAlignment="CENTER" wrappingWidth="52.916015625">
                      <font>
@@ -1200,7 +1210,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.vgrow="ALWAYS">
+            <AnchorPane prefHeight="62.0" prefWidth="74.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <children>
                   <ImageView fitHeight="55.0" fitWidth="53.0" layoutX="45.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
                      <image>
@@ -1214,7 +1224,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS">
+            <AnchorPane prefHeight="34.0" prefWidth="56.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <children>
                   <Text layoutX="32.0" layoutY="23.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Katedra Biotechnologii Środowiskowej" textAlignment="CENTER" wrappingWidth="52.916015625">
                      <font>
@@ -1233,7 +1243,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
+            <AnchorPane prefHeight="59.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
                   <Text layoutX="28.0" layoutY="19.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Surowców Naturalnych i Kosmetyków" textAlignment="CENTER" wrappingWidth="52.916015625">
                      <font>
@@ -1252,7 +1262,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane GridPane.columnIndex="10" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.vgrow="ALWAYS">
+            <AnchorPane prefHeight="65.0" prefWidth="51.0" GridPane.columnIndex="10" GridPane.rowIndex="12">
                <children>
                   <Text layoutX="1.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Katedra Inżynierii Bioprocesowej" textAlignment="CENTER" wrappingWidth="57.462890625">
                      <font>
@@ -1271,7 +1281,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane GridPane.columnIndex="5" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.vgrow="ALWAYS">
+            <AnchorPane prefHeight="34.0" prefWidth="59.0" GridPane.columnIndex="5" GridPane.rowIndex="12">
                <children>
                   <Text layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Katedra Zarządzania" textAlignment="CENTER" wrappingWidth="58.916015625">
                      <font>
@@ -1290,7 +1300,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane GridPane.columnIndex="11" GridPane.hgrow="ALWAYS" GridPane.rowIndex="9" GridPane.vgrow="ALWAYS">
+            <AnchorPane prefHeight="52.0" prefWidth="64.0" GridPane.columnIndex="11" GridPane.rowIndex="10">
                <children>
                   <Text layoutX="89.0" layoutY="30.0" rotate="-90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="400">
                      <font>
