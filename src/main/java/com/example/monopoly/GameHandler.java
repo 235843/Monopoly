@@ -37,7 +37,7 @@ public class GameHandler {
 				"Pomoc starszego roku",
 				"Katedra Inżynierii Środowiska",
 				"Zaległe zajęcia WF",
-				"Centrym Sprotu",
+				"Centrum Sportu",
 				"Katedra Zarządzania",
 				"Mail z dziekanatu",
 				"Instytut Nauk Społecznych i Zarządzania Technologiami",
@@ -73,6 +73,12 @@ public class GameHandler {
 				"Instytut Matematyki",
 				"Opłata za legitymację"
 		};
+
+		Integer[] rentCost = {
+				0, 2, 0, 4, 0, 25, 6, 6, 0, 8, 0, 15, 10, 10, 12, 25, 14, 0, 14, 16, 0, 18, 0, 18, 20, 25, 22, 22, 15,
+				24, 0, 26, 26, 0, 28, 25, 0 , 35, 40,0
+		};
+
 		
 		Integer[] costs = {
 			0, 60, 0, 60, 200, 200, 100, 0, 100, 120, 0, 150, 140, 140, 160, 200, 180, 0, 180, 200, 0, 220, 0, 220, 240,
@@ -88,25 +94,25 @@ public class GameHandler {
 		int x = 11;
 		int y = 11;
 		for(int i = x; i > 0; i--) {
-			cards.add(new CardInfo(names[id], costs[id], id, famId[id], i, y, getNodeByRowColumnIndex(i, y, id), getFill(i, y, id)));
+			cards.add(new CardInfo(names[id], costs[id], rentCost[id], id, famId[id], i, y, getNodeByRowColumnIndex(i, y, id), getFill(i, y, id)));
 			id++;
 		}
 		x = 1;
 		y--;
 		for(int i = y; i > 0; i--) {
-			cards.add(new CardInfo(names[id], costs[id], id, famId[id], x, i, getNodeByRowColumnIndex(x, i, id), getFill(x, i, id)));
+			cards.add(new CardInfo(names[id], costs[id], rentCost[id], id, famId[id], x, i, getNodeByRowColumnIndex(x, i, id), getFill(x, i, id)));
 			id++;
 		}
 		y = 1;
 		x = 2;
 		for(int i = x; i < 12; i++) {
-			cards.add(new CardInfo(names[id], costs[id], id, famId[id], i, y, getNodeByRowColumnIndex(i, y, id), getFill(i, y, id)));
+			cards.add(new CardInfo(names[id], costs[id], rentCost[id], id, famId[id], i, y, getNodeByRowColumnIndex(i, y, id), getFill(i, y, id)));
 			id++;
 		}
 		x = 11;
 		y = 2;
 		for(int i = y; i < 11; i++) {
-			cards.add(new CardInfo(names[id], costs[id], id, famId[id], x, i, getNodeByRowColumnIndex(x, i, id), getFill(x, i, id)));
+			cards.add(new CardInfo(names[id], costs[id], rentCost[id], id, famId[id], x, i, getNodeByRowColumnIndex(x, i, id), getFill(x, i, id)));
 			id++;
 		}
 		players.add(new PlayerInfo(0, 0, gridpane, p1Money, p1));
