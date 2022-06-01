@@ -9,7 +9,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.*;
 import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
 import javafx.scene.shape.*;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class GameHandler {
@@ -18,6 +21,14 @@ public class GameHandler {
 	ArrayList<PlayerInfo> players = new ArrayList<PlayerInfo>();
 	@FXML
     private GridPane gridpane;
+	@FXML
+    private VBox p1;
+	@FXML
+	private VBox p2;
+	@FXML
+    private Text p1Money;
+	@FXML
+    private Text p2Money;
 	@FXML
 	public void initialize() {
 		String[] names = {
@@ -77,29 +88,29 @@ public class GameHandler {
 		int x = 11;
 		int y = 11;
 		for(int i = x; i > 0; i--) {
-			cards.add(new CardInfo(names[id], costs[id], id, famId[id], i, y, getNodeByRowColumnIndex(i, y, id)));
+			cards.add(new CardInfo(names[id], costs[id], id, famId[id], i, y, getNodeByRowColumnIndex(i, y, id), getFill(i, y, id)));
 			id++;
 		}
 		x = 1;
 		y--;
 		for(int i = y; i > 0; i--) {
-			cards.add(new CardInfo(names[id], costs[id], id, famId[id], x, i, getNodeByRowColumnIndex(x, i, id)));
+			cards.add(new CardInfo(names[id], costs[id], id, famId[id], x, i, getNodeByRowColumnIndex(x, i, id), getFill(x, i, id)));
 			id++;
 		}
 		y = 1;
 		x = 2;
 		for(int i = x; i < 12; i++) {
-			cards.add(new CardInfo(names[id], costs[id], id, famId[id], i, y, getNodeByRowColumnIndex(i, y, id)));
+			cards.add(new CardInfo(names[id], costs[id], id, famId[id], i, y, getNodeByRowColumnIndex(i, y, id), getFill(i, y, id)));
 			id++;
 		}
 		x = 11;
 		y = 2;
 		for(int i = y; i < 11; i++) {
-			cards.add(new CardInfo(names[id], costs[id], id, famId[id], x, i, getNodeByRowColumnIndex(x, i, id)));
+			cards.add(new CardInfo(names[id], costs[id], id, famId[id], x, i, getNodeByRowColumnIndex(x, i, id), getFill(x, i, id)));
 			id++;
 		}
-		players.add(new PlayerInfo(0, 0));
-		players.add(new PlayerInfo(1, 1));
+		players.add(new PlayerInfo(0, 0, gridpane, p1Money, p1));
+		players.add(new PlayerInfo(1, 1, gridpane, p2Money, p2));
 		gridpane.add(players.get(0).pawn, 11, 11);
 		gridpane.add(players.get(1).pawn, 11, 11);
 		players.get(0).pawn.setCenterX(5);
@@ -108,7 +119,7 @@ public class GameHandler {
 		
 	}
 	
-	public AnchorPane getNodeByRowColumnIndex (final int row, final int column, final Integer id) {
+	public AnchorPane getNodeByRowColumnIndex (final int column, final int row, final Integer id) {
 		AnchorPane result = null;
 	    ObservableList<Node> childrens = gridpane.getChildren();
 
@@ -124,6 +135,22 @@ public class GameHandler {
 	    }
 
 	    return result;
+	}
+	
+	@SuppressWarnings("exports")
+	public Paint getFill (final int column, final int row, final Integer id) {
+		Rectangle result = null;
+	    ObservableList<Node> childrens = gridpane.getChildren();
+
+	    for (Node node : childrens) {
+	        if(node instanceof Rectangle && GridPane.getRowIndex(node) == row && GridPane.getColumnIndex(node) == column) {
+	            result = (Rectangle)node;
+	            return result.getFill();
+	        }
+	        
+	    }
+
+	    return Color.RED;
 	}
 	
 	
@@ -142,8 +169,9 @@ public class GameHandler {
 		round++;
 	}
 	
-	public void recognizeCard() {
-		
+	public void addNode(Node node, int x, int y) {
+		gridpane.add(node, x, y);
+		return;
 	}
 	
 	
