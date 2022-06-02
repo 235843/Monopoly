@@ -125,22 +125,8 @@ public class PlayerInfo {
 					cardOwn.add(card);
 				}
 			});
-			Button but = new Button();
-			but.setOnAction(new EventHandler<ActionEvent>() {
-				@Override
-				public void handle(ActionEvent actionEvent) {
-
-					for (CardInfo i: cardOwn) {
-						if(i.equals(card))
-							return;
-					}
-					money-=card.cost;
-					cardOwn.add(card);
-				}
-			});
 
 			aP.getChildren().add(buyButton);
-			aP.getChildren().add(but);
 			aP.getChildren().get(4).setLayoutY(180);
 			aP.getChildren().get(4).setLayoutX(25);
 		}
