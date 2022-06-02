@@ -92,4 +92,6 @@ public class PlayerInfo {
 		playerVBox.getChildren().add(aP);
 		return;
 	}
+	
+
 }
