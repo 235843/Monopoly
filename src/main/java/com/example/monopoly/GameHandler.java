@@ -119,8 +119,8 @@ public class GameHandler {
 		players.add(new PlayerInfo(1, 1, gridpane, p2Money, p2));
 		gridpane.add(players.get(0).pawn, 11, 11);
 		gridpane.add(players.get(1).pawn, 11, 11);
-		players.get(0).pawn.setCenterX(5);
-		players.get(1).pawn.setCenterX(5);
+		players.get(0).pawn.setCenterX(10);
+		players.get(1).pawn.setCenterX(10);
 	
 		
 	}

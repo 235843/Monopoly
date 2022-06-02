@@ -75,7 +75,7 @@ public class PlayerInfo {
 		}
 		Button buyButton = new Button("Buy");
 		AnchorPane aP = new AnchorPane();
-		Rectangle rec = new Rectangle(0, 0, 150, 200);
+		Rectangle rec = new Rectangle(0, 0, 180, 180);
 		rec.setFill(card.fill);
 		int famId = card.familyId;
 		if (famId == 2 || famId == 3) {
@@ -125,8 +125,22 @@ public class PlayerInfo {
 					cardOwn.add(card);
 				}
 			});
+			Button but = new Button();
+			but.setOnAction(new EventHandler<ActionEvent>() {
+				@Override
+				public void handle(ActionEvent actionEvent) {
+
+					for (CardInfo i: cardOwn) {
+						if(i.equals(card))
+							return;
+					}
+					money-=card.cost;
+					cardOwn.add(card);
+				}
+			});
 
 			aP.getChildren().add(buyButton);
+			aP.getChildren().add(but);
 			aP.getChildren().get(4).setLayoutY(180);
 			aP.getChildren().get(4).setLayoutX(25);
 		}
