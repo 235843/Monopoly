@@ -2,6 +2,7 @@ package com.example.monopoly;
 
 import java.util.ArrayList;
 import java.util.EventListener;
+import java.util.Random;
 
 import javafx.event.ActionEvent;
 import javafx.event.Event;
@@ -48,7 +49,7 @@ public class PlayerInfo {
 		this.playerVBox = playerVBox;
 	}
 	
-	public void changePosition(int newPos, ArrayList<CardInfo> cards) {
+	public void changePosition(int newPos, ArrayList<CardInfo> cards, ArrayList<OpportunityCards> ChanceCards, ArrayList<OpportunityCards> CommCards) {
 		int x, y, count;
 		for(int i = 0; i < 40; i++) {
 			CardInfo card = cards.get(i);
@@ -62,13 +63,27 @@ public class PlayerInfo {
 				GridPane.setColumnIndex(this.pawn, x);
 				GridPane.setRowIndex(this.pawn, y);
 				this.position = card.id;
-				this.recognizeCard(card);
+				this.recognizeCard(card, ChanceCards, CommCards);
 				break;
 			}
 		}	
 	}
 	
-	public void recognizeCard(CardInfo card) {
+	public OpportunityCards getChanceCard(ArrayList<OpportunityCards> ChanceCards) {
+		Random rand = new Random();
+		int x = rand.nextInt(50);
+		x += 1;
+		return ChanceCards.get(x);
+	}
+	
+	public OpportunityCards getCommCard(ArrayList<OpportunityCards> CommCards) {
+		Random rand = new Random();
+		int x = rand.nextInt(50);
+		x += 1;
+		return CommCards.get(x);
+	}
+	
+	public void recognizeCard(CardInfo card, ArrayList<OpportunityCards> ChanceCards, ArrayList<OpportunityCards> CommCards) {
 		if(playerVBox.getChildren().size() > 2) {
 			playerVBox.getChildren().remove(2);
 			//playerVBox.getChildren().remove(2);
@@ -95,7 +110,8 @@ public class PlayerInfo {
 		cName.setTextAlignment(TextAlignment.CENTER);
 		aP.getChildren().add(rec);
 		aP.getChildren().add(cName);
-
+		aP.getChildren().get(1).setLayoutY(60);
+		aP.getChildren().get(1).setLayoutX(25);
 
 		if(card.cost>0) {
 			cost.setText("Cena: "+card.cost.toString()+"$");
@@ -130,11 +146,36 @@ public class PlayerInfo {
 			aP.getChildren().get(4).setLayoutY(180);
 			aP.getChildren().get(4).setLayoutX(25);
 		}
+		
+		else if (card.familyId == 9 || card.familyId == 12) {
+			OpportunityCards oppCard = getChanceCard(ChanceCards);
+			cost.setText(oppCard.name);
+			cost.setWrappingWidth(100);
+			cost.setTextAlignment(TextAlignment.CENTER);
+			aP.getChildren().add(cost);
+			aP.getChildren().get(1).setLayoutY(10);
+			aP.getChildren().get(2).setLayoutY(60);
+			aP.getChildren().get(2).setLayoutX(25);
+			
+			if(oppCard.get == 0 && oppCard.pay == 0) {
+				buyButton.setText("OK");
+			}
+			else if(oppCard.get == 0) {
+				buyButton.setText("Pay");
+			}
+			else if(oppCard.pay == 0) {
+				buyButton.setText("Get");
+			}
+			
+			aP.getChildren().add(buyButton);
+			aP.getChildren().get(3).setLayoutY(140);
+			aP.getChildren().get(3).setLayoutX(25);
+		}
+		
 
 
 
-		aP.getChildren().get(1).setLayoutY(60);
-		aP.getChildren().get(1).setLayoutX(25);
+		
 		playerVBox.getChildren().add(aP);
 		return;
 	}
