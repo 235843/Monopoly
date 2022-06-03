@@ -115,8 +115,12 @@ public class GameHandler {
 			cards.add(new CardInfo(names[id], costs[id], rentCost[id], id, famId[id], x, i, getNodeByRowColumnIndex(x, i, id), getFill(x, i, id)));
 			id++;
 		}
+		p1Money.setText("1500$");
+		p2Money.setText("1500$");
 		players.add(new PlayerInfo(0, 0, gridpane, p1Money, p1));
 		players.add(new PlayerInfo(1, 1, gridpane, p2Money, p2));
+		players.get(0).setOpponent(players.get(1));
+		players.get(1).setOpponent(players.get(0));
 		gridpane.add(players.get(0).pawn, 11, 11);
 		gridpane.add(players.get(1).pawn, 11, 11);
 		players.get(0).pawn.setCenterX(10);
@@ -156,7 +160,7 @@ public class GameHandler {
 	        
 	    }
 
-	    return Color.RED;
+	    return Color.YELLOW;
 	}
 	
 	
@@ -164,10 +168,10 @@ public class GameHandler {
 
 	public void randDice() {
 		Random rand = new Random();
-		int x = rand.nextInt(6);
-		x += 1;
+		int x = rand.nextInt(6)+1;
 		if(round % 2 == 0) {
 			players.get(1).changePosition(x, cards);
+
 		}
 		else {
 			players.get(0).changePosition(x, cards);
@@ -179,6 +183,7 @@ public class GameHandler {
 		gridpane.add(node, x, y);
 		return;
 	}
-	
+
+
 	
 }
