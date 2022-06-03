@@ -13,6 +13,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.*;
 import javafx.scene.text.Text;
+import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 
 public class GameHandler {
@@ -25,10 +26,6 @@ public class GameHandler {
     private VBox p1;
 	@FXML
 	private VBox p2;
-	@FXML
-    private Text p1Money;
-	@FXML
-    private Text p2Money;
 	@FXML
 	public void initialize() {
 		String[] names = {
@@ -115,17 +112,48 @@ public class GameHandler {
 			cards.add(new CardInfo(names[id], costs[id], rentCost[id], id, famId[id], x, i, getNodeByRowColumnIndex(x, i, id), getFill(x, i, id)));
 			id++;
 		}
-		p1Money.setText("1500$");
-		p2Money.setText("1500$");
-		players.add(new PlayerInfo(0, 0, gridpane, p1Money, p1));
-		players.add(new PlayerInfo(1, 1, gridpane, p2Money, p2));
+
+		players.add(new PlayerInfo(0, 0, gridpane, p1));
+		players.add(new PlayerInfo(1, 1, gridpane, p2));
 		players.get(0).setOpponent(players.get(1));
 		players.get(1).setOpponent(players.get(0));
 		gridpane.add(players.get(0).pawn, 11, 11);
 		gridpane.add(players.get(1).pawn, 11, 11);
 		players.get(0).pawn.setCenterX(10);
 		players.get(1).pawn.setCenterX(10);
-	
+
+		players.get(0).displayPlayer();
+		players.get(1).displayPlayer();
+
+//		AnchorPane anchorPane1 = new AnchorPane();
+//		AnchorPane anchorPane2 = new AnchorPane();
+//		Text p1Name = new Text();
+//		Text p2Name = new Text();
+//
+//		p1Name.setText("Player 1");
+//		p2Name.setText("Player 2");
+//		p1Name.setWrappingWidth(100);
+//		p2Name.setWrappingWidth(100);
+//		p1Name.setTextAlignment(TextAlignment.CENTER);
+//		p2Name.setTextAlignment(TextAlignment.CENTER);
+//
+//		anchorPane1.getChildren().add(p1Name);
+//		anchorPane2.getChildren().add(p2Name);
+//
+//		players.get(0).moneyText.setTextAlignment(TextAlignment.CENTER);
+//		players.get(1).moneyText.setTextAlignment(TextAlignment.CENTER);
+//		players.get(0).moneyText.setWrappingWidth(100);
+//		players.get(1).moneyText.setWrappingWidth(100);
+//
+//		anchorPane1.getChildren().add(p1Name);
+//		anchorPane1.getChildren().add(players.get(0).moneyText);
+//		anchorPane2.getChildren().add(p2Name);
+//		anchorPane2.getChildren().add(players.get(1).moneyText);
+//
+//
+//		players.get(0).playerVBox.getChildren().add(anchorPane1);
+//		players.get(1).playerVBox.getChildren().add(anchorPane2);
+
 		
 	}
 	
@@ -181,7 +209,6 @@ public class GameHandler {
 	
 	public void addNode(Node node, int x, int y) {
 		gridpane.add(node, x, y);
-		return;
 	}
 
 

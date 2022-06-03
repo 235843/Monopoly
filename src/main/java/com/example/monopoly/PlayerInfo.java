@@ -26,7 +26,7 @@ public class PlayerInfo {
 	VBox playerVBox;
 	PlayerInfo opponent;
 
-	PlayerInfo(Integer id, Integer imgId, GridPane gridPane, Text moneyText, VBox playerVBox){
+	PlayerInfo(Integer id, Integer imgId, GridPane gridPane, VBox playerVBox){
 		this.id = id;
 		this.imgId = imgId;
 		this.money = 1500;
@@ -35,14 +35,43 @@ public class PlayerInfo {
 		this.pawn = new Circle(11, 11, 20, Color.PINK);
 		this.pawn.setId(this.id.toString());
 		this.gridPane = gridPane;
-		this.moneyText = moneyText;
 		this.playerVBox = playerVBox;
 		this.opponent = null;
+		this.moneyText = new Text();
+		this.moneyText.setText("1500$");
 	}
 
 	public void setOpponent(PlayerInfo opponent)
 	{
 		this.opponent = opponent;
+	}
+
+	public void displayPlayer()
+	{
+		AnchorPane aP = new AnchorPane();
+
+		Text player = new Text();
+		Text money = moneyText;
+		Integer pid = id;
+		if(pid<2)
+			pid+=1;
+		player.setText("Player " + pid);
+		player.setWrappingWidth(100);
+		player.setTextAlignment(TextAlignment.CENTER);
+		aP.getChildren().add(player);
+		money.setWrappingWidth(100);
+		money.setTextAlignment(TextAlignment.CENTER);
+		aP.getChildren().add(moneyText);
+
+		aP.getChildren().get(0).setLayoutY(20);
+		aP.getChildren().get(1).setLayoutY(40);
+		aP.getChildren().get(0).setLayoutX(25);
+		aP.getChildren().get(1).setLayoutX(25);
+
+		playerVBox.getChildren().add(aP);
+
+
+		return;
 	}
 
 	public void changePosition(int newPos, ArrayList<CardInfo> cards) {
@@ -52,6 +81,8 @@ public class PlayerInfo {
 			count = this.position + newPos;
 			if(count >= 40) {
 				count -= 40;
+				money+=200;
+				moneyText.setText(money+"$");
 			}
 			if(count == card.id) {
 				x = card.positionX;
@@ -66,8 +97,11 @@ public class PlayerInfo {
 	}
 
 	public void recognizeCard(CardInfo card) {
-		if(playerVBox.getChildren().size() > 2) {
-			playerVBox.getChildren().remove(2);
+
+		if(playerVBox.getChildren().size() > 1) {
+			playerVBox.getChildren().remove(1);
+			playerVBox.getChildren().remove(0);
+			displayPlayer();
 			//playerVBox.getChildren().remove(2);
 		}
 
@@ -82,6 +116,7 @@ public class PlayerInfo {
 				}
 				opponent.money+=i.rentCost*(i.houses+1);
 				this.money-=i.rentCost*(i.houses+1);
+				this.moneyText.setText(money+"$");
 				return;
 			}
 		}
@@ -104,7 +139,6 @@ public class PlayerInfo {
 		Text cName = new Text();
 		Text cost = new Text();
 		Text rentCost = new Text();
-		Text playersMoney = new Text();
 		cName.setText(card.name);
 		cName.setWrappingWidth(100);
 		cName.setTextAlignment(TextAlignment.CENTER);
@@ -114,12 +148,13 @@ public class PlayerInfo {
 		if(card.id==4 || card.id==39)
 		{
 			money-=card.cost;
+			this.moneyText.setText(money+"$");
 			Text text = new Text();
 			text.setText("Zapłacono "+card.cost.toString()+"$");
 			text.setWrappingWidth(100);
 			text.setTextAlignment(TextAlignment.CENTER);
 			aP.getChildren().add(text);
-			aP.getChildren().get(2).setLayoutY(140);
+			aP.getChildren().get(2).setLayoutY(120);
 			aP.getChildren().get(2).setLayoutX(25);
 
 		}
@@ -151,28 +186,15 @@ public class PlayerInfo {
 							return;
 					}
 					money-=card.cost;
+					moneyText.setText(money+"$");
 					cardOwn.add(card);
-					aP.getChildren().remove(5);
-					playersMoney.setText(money.toString());
-					playersMoney.setWrappingWidth(100);
-					playersMoney.setTextAlignment(TextAlignment.CENTER);
-					aP.getChildren().add(playersMoney);
-					aP.getChildren().get(5).setLayoutX(25);
-					aP.getChildren().get(5).setLayoutY(150);
+
 				}
 			});
 
 			aP.getChildren().add(buyButton);
-			aP.getChildren().get(4).setLayoutY(150);
+			aP.getChildren().get(4).setLayoutY(160);
 			aP.getChildren().get(4).setLayoutX(25);
-			playersMoney.setText(this.money.toString());
-			playersMoney.setWrappingWidth(100);
-			playersMoney.setTextAlignment(TextAlignment.CENTER);
-			aP.getChildren().add(playersMoney);
-			aP.getChildren().get(5).setLayoutX(25);
-			aP.getChildren().get(5).setLayoutY(150);
-
-
 		}
 
 
@@ -180,19 +202,7 @@ public class PlayerInfo {
 		aP.getChildren().get(1).setLayoutY(60);
 		aP.getChildren().get(1).setLayoutX(25);
 		playerVBox.getChildren().add(aP);
-		return;
 	}
 
-	public void payTaxes(CardInfo card, AnchorPane aP)
-	{
-		money-=card.cost;
-		Text text = new Text();
-		text.setText("Zapłacono "+card.cost.toString()+"$");
-		text.setWrappingWidth(100);
-		text.setTextAlignment(TextAlignment.CENTER);
-		aP.getChildren().add(text);
-		aP.getChildren().get(2).setLayoutY(140);
-		aP.getChildren().get(2).setLayoutX(25);
-	}
 
 }
