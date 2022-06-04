@@ -1,8 +1,5 @@
 package com.example.monopoly;
 
-import java.util.Random;
-
-import javafx.scene.Node;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Paint;
 
@@ -13,7 +10,7 @@ public class CardInfo {
 	Integer id;
 	Integer familyId;
 	Integer positionX;
-	Integer posiotionY;
+	Integer positionY;
 	AnchorPane anchorPane;
 	Paint fill;
 	Integer houses;
@@ -27,7 +24,7 @@ public class CardInfo {
 		this.id = id;
 		this.familyId = familyId;
 		this.positionX = positionX;
-		this.posiotionY = positionY;
+		this.positionY = positionY;
 		this.anchorPane = anchorPane;
 		this.fill = fill;
 		this.houses = 0;
