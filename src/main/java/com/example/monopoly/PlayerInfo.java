@@ -166,7 +166,81 @@ public class PlayerInfo {
 		
 		aP.getChildren().get(1).setLayoutY(20);
 		//aP.getChildren().get(1).setLayoutX(25);
-		
+		for (CardInfo i: cardOwn) {
+			if(i.equals(card))
+			{
+				Button buyButton = new Button("Buy house");
+				buyButton.setOnAction(new EventHandler<ActionEvent>() {
+					@Override
+					public void handle(ActionEvent actionEvent) {
+						card.houses += 1;
+						if(card.familyId <= 1) {
+							if(money >= 50) {
+								money -= 50;
+								card.rentCost += card.houses * 10;
+							}
+							else {
+								Text text = new Text();
+								text.setText("Nie wystarczające środki");
+								text.setWrappingWidth(180);
+								text.setTextAlignment(TextAlignment.CENTER);
+								aP.getChildren().add(text);
+							}
+							
+						}
+						else if (card.familyId <= 3) {
+							if(money >= 100) {
+								money -= 100;
+								card.rentCost += card.houses * 25;
+							}
+							else {
+								Text text = new Text();
+								text.setText("Nie wystarczające środki");
+								text.setWrappingWidth(180);
+								text.setTextAlignment(TextAlignment.CENTER);
+								aP.getChildren().add(text);
+							}
+							
+						}
+						else if (card.familyId <= 5) {
+							if(money >= 150) {
+								money -= 150;
+								card.rentCost += card.houses * 50;
+							}
+							else {
+								Text text = new Text();
+								text.setText("Nie wystarczające środki");
+								text.setWrappingWidth(180);
+								text.setTextAlignment(TextAlignment.CENTER);
+								aP.getChildren().add(text);
+							}
+							
+						}
+						else if (card.familyId <= 7) {
+							if(money >= 200) {
+								money -= 200;
+								card.rentCost += card.houses * 100;
+							}
+							else {
+								Text text = new Text();
+								text.setText("Nie wystarczające środki");
+								text.setWrappingWidth(180);
+								text.setTextAlignment(TextAlignment.CENTER);
+								aP.getChildren().add(text);
+							}
+						}
+						
+						moneyText.setText(money+"$");
+						
+						new blockMove(buyButton, 500).start();
+					}
+					
+				});
+				aP.getChildren().add(buyButton);
+				aP.getChildren().get(2).setLayoutY(180);
+				aP.getChildren().get(2).setLayoutX(50);
+			}
+		}
 
 		if(card.id==4 || card.id==39)
 		{
