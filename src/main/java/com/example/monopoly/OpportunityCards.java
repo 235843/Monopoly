@@ -7,7 +7,7 @@ public class OpportunityCards {
 	Integer pay;
 	Integer get;
 	Integer whereToGo;
-	Boolean prison;
+	Boolean prisonExit;
 	Boolean isChance;
 	
 	String chances[] = {
@@ -27,11 +27,15 @@ public class OpportunityCards {
 	};
 	
 	Integer chancesGet[] = {
-			0, 0, 0, 50, 0, 0, 0, 0, 0, 50, 150
+			0, 0, 0, 0, 50, 0, 0, 0, 0, 0, 50, 150
 	};
 	
 	Integer chancesPay[] = {
 			0, 0, 0, 0, 0, 0, 0, 0, 25, 15, 0, 0, 0
+	};
+	
+	Integer chancesWhereToGo[] = {
+			20, 0, 18, 37, null, null, null, 30, null, null, 5, null, null
 	};
 	
 	String community[] = {
@@ -48,36 +52,52 @@ public class OpportunityCards {
 			"Opłać opłaty szpitalne w wysokości £100",
 			"Opłać czesne w szkole w wysokości 50 funtów.",
 			"Otrzymaj 25 funtów opłaty za doradztwo",
-			"Zostałeś oceniony za naprawę ulic. 40 funtów za dom. 115 funtów za hotel.",
 			"Zdobyłeś drugą nagrodę w konkursie piękności. Zbierz 10 £",
 			"Odziedziczyłeś 100 funtów"
 
 	};
+	
+	Integer communityGet[] = {
+			200, 200, 0, 50, 0, 0, 100, 20, 10, 100, 0, 0, 25, 10, 100
+	};
+	
+	Integer communityPay[] = {
+			0, 0, 50, 0, 0, 0, 0, 0, 0, 0, 100, 50, 0, 0, 0
+	};
+	
 
 	OpportunityCards(Boolean isChance){
+		Random rand = new Random();
+		
 		if (isChance) {
-			this.name = randChance();
+			int x = rand.nextInt(chances.length - 1);
+			this.name = chances[x];
+			this.pay = chancesPay[x];
+			this.get = chancesGet[x];
+			this.whereToGo = chancesWhereToGo[x];
+			this.prisonExit = false;
+			if(x == 5) {
+				this.prisonExit = true;
+			}
+			this.isChance = true;
+		}
+		else {
+			int x = rand.nextInt(community.length - 1);
+			this.name = community[x];
+			this.pay = communityPay[x];
+			this.get = communityGet[x];
+			this.whereToGo = null;
+			if(x == 5) {
+				this.whereToGo = 30;
+			}
+			this.prisonExit = false;
+			if(x == 4) {
+				this.prisonExit = true;
+			}
+			this.isChance = false;
 		}
 	}
 	
 	
-	
-	public String randChance() {
-		
-		Random rand = new Random();
-		int x = rand.nextInt(chances.length);
-		x += 1;
-		String str = chances[x]+ " " + x;
-		return str;
-	}
-	
-	public String randCommunity() {
-		
-		Random rand = new Random();
-		int x = rand.nextInt(chances.length);
-		x += 1;
-		String str = chances[x]+ " " + x;
-		return str;
-	}
 	
 }

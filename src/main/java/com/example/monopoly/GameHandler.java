@@ -17,9 +17,12 @@ import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 
 public class GameHandler {
+	
 	Integer round = 1;
 	ArrayList<CardInfo> cards = new ArrayList<CardInfo>();
 	ArrayList<PlayerInfo> players = new ArrayList<PlayerInfo>();
+	ArrayList<OpportunityCards> ChanceCards = new ArrayList<OpportunityCards>();
+	ArrayList<OpportunityCards> CommCards = new ArrayList<OpportunityCards>();
 	@FXML
     private GridPane gridpane;
 	@FXML
@@ -81,11 +84,15 @@ public class GameHandler {
 			0, 60, 0, 60, 200, 200, 100, 0, 100, 120, 0, 150, 140, 140, 160, 200, 180, 0, 180, 200, 0, 220, 0, 220, 240,
 			200, 260, 260, 150, 280, 0, 300, 300, 0, 320, 200, 0, 350, 400, 100
 		};
-		
+		// 8 -start
+		// 9 - Pomoc starszego roku
+		// 12 - Mail
 		Integer[] famId = {
 				8, 0, 9, 0, 10, 11, 1, 12, 1, 1, 13, 10, 2, 2, 2, 11, 3, 9, 3, 3, 13, 4, 12, 4, 4, 11, 5, 5, 10, 5, 13, 
 				6, 6, 12, 6, 11, 12, 7, 7, 10
 		};
+		
+		
 		
 		int id = 0;
 		int x = 11;
@@ -121,6 +128,16 @@ public class GameHandler {
 		gridpane.add(players.get(1).pawn, 11, 11);
 		players.get(0).pawn.setCenterX(10);
 		players.get(1).pawn.setCenterX(10);
+	
+		for(int i = 0; i < 50; i++) {
+			ChanceCards.add(new OpportunityCards(true));
+		}
+		for(int i = 0; i < 50; i++) {
+			CommCards.add(new OpportunityCards(false));
+		}
+	
+	
+	
 
 		players.get(0).displayPlayer();
 		players.get(1).displayPlayer();
@@ -198,11 +215,11 @@ public class GameHandler {
 		Random rand = new Random();
 		int x = rand.nextInt(6)+1;
 		if(round % 2 == 0) {
-			players.get(1).changePosition(x, cards);
+			players.get(1).changePosition(x, cards, ChanceCards, CommCards);
 
 		}
 		else {
-			players.get(0).changePosition(x, cards);
+			players.get(0).changePosition(x, cards, ChanceCards, CommCards);
 		}
 		round++;
 	}

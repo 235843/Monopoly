@@ -1,14 +1,25 @@
 package com.example.monopoly;
 
 import java.util.ArrayList;
+import java.util.EventListener;
+import java.util.Random;
 
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.event.EventHandler;
+import javafx.fxml.FXML;
+import javafx.geometry.Pos;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
+import javafx.scene.paint.CycleMethod;
+import javafx.scene.paint.LinearGradient;
+import javafx.scene.paint.Paint;
+import javafx.scene.paint.Stop;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
@@ -40,7 +51,7 @@ public class PlayerInfo {
 		this.moneyText = new Text();
 		this.moneyText.setText("1500$");
 	}
-
+	
 	public void setOpponent(PlayerInfo opponent)
 	{
 		this.opponent = opponent;
@@ -74,30 +85,7 @@ public class PlayerInfo {
 		return;
 	}
 
-	public void changePosition(int newPos, ArrayList<CardInfo> cards) {
-		int x, y, count;
-		for(int i = 0; i < 40; i++) {
-			CardInfo card = cards.get(i);
-			count = this.position + newPos;
-			if(count >= 40) {
-				count -= 40;
-				money+=200;
-				moneyText.setText(money+"$");
-			}
-			if(count == card.id) {
-				x = card.positionX;
-				y = card.positionY;
-				GridPane.setColumnIndex(this.pawn, x);
-				GridPane.setRowIndex(this.pawn, y);
-				this.position = card.id;
-				this.recognizeCard(card);
-				break;
-			}
-		}
-	}
-
-	public void recognizeCard(CardInfo card) {
-
+	public void recognizeCard(CardInfo card, ArrayList<OpportunityCards> ChanceCards, ArrayList<OpportunityCards> CommCards) {
 		if(playerVBox.getChildren().size() > 1) {
 			playerVBox.getChildren().remove(1);
 			playerVBox.getChildren().remove(0);
@@ -121,8 +109,7 @@ public class PlayerInfo {
 			}
 		}
 
-
-
+		//Button buyButton = new Button("Buy");
 		AnchorPane aP = new AnchorPane();
 		Rectangle rec = new Rectangle(0, 0, 180, 180);
 		rec.setFill(card.fill);
@@ -144,6 +131,9 @@ public class PlayerInfo {
 		cName.setTextAlignment(TextAlignment.CENTER);
 		aP.getChildren().add(rec);
 		aP.getChildren().add(cName);
+		aP.getChildren().get(1).setLayoutY(60);
+		aP.getChildren().get(1).setLayoutX(25);
+
 
 		if(card.id==4 || card.id==39)
 		{
@@ -159,7 +149,6 @@ public class PlayerInfo {
 
 		}
 
-
 		else if(card.cost>0) {
 			Button buyButton = new Button("Buy");
 			cost.setText("Cena: "+card.cost.toString()+"$");
@@ -170,7 +159,7 @@ public class PlayerInfo {
 			aP.getChildren().get(2).setLayoutY(160);
 			aP.getChildren().get(2).setLayoutX(25);
 
-			rentCost.setText("Czynsz :" + card.rentCost.toString() +"$");
+			rentCost.setText("Czynsz: " + card.rentCost.toString() +"$");
 			rentCost.setWrappingWidth(100);
 			rentCost.setTextAlignment(TextAlignment.CENTER);
 			aP.getChildren().add(rentCost);
@@ -180,7 +169,6 @@ public class PlayerInfo {
 			buyButton.setOnAction(new EventHandler<ActionEvent>() {
 				@Override
 				public void handle(ActionEvent actionEvent) {
-
 					for (CardInfo i: cardOwn) {
 						if(i.equals(card))
 							return;
@@ -188,21 +176,87 @@ public class PlayerInfo {
 					money-=card.cost;
 					moneyText.setText(money+"$");
 					cardOwn.add(card);
-
+					
 				}
+				
 			});
-
+			
 			aP.getChildren().add(buyButton);
-			aP.getChildren().get(4).setLayoutY(160);
+			buyButton.toFront();
+			aP.getChildren().get(4).setLayoutY(180);
 			aP.getChildren().get(4).setLayoutX(25);
 		}
+		
+		else if (card.familyId == 9 || card.familyId == 12) {
+			Button buyButton = new Button();
+			OpportunityCards oppCard = getChanceCard(ChanceCards);
+			cost.setText(oppCard.name);
+			cost.setWrappingWidth(100);
+			cost.setTextAlignment(TextAlignment.CENTER);
+			aP.getChildren().add(cost);
+			aP.getChildren().get(1).setLayoutY(10);
+			aP.getChildren().get(2).setLayoutY(60);
+			aP.getChildren().get(2).setLayoutX(25);
+			
+			if(oppCard.get == 0 && oppCard.pay == 0) {
+				buyButton.setText("OK");
+			}
+			else if(oppCard.get == 0) {
+				buyButton.setText("Pay");
+			}
+			else if(oppCard.pay == 0) {
+				buyButton.setText("Get");
+			}
+			
+			aP.getChildren().add(buyButton);
+			aP.getChildren().get(3).setLayoutY(140);
+			aP.getChildren().get(3).setLayoutX(25);
+		}
+		
 
 
 
-		aP.getChildren().get(1).setLayoutY(60);
-		aP.getChildren().get(1).setLayoutX(25);
+		
 		playerVBox.getChildren().add(aP);
+		return;
 	}
-
+	
+	public void changePosition(int newPos, ArrayList<CardInfo> cards, ArrayList<OpportunityCards> ChanceCards, ArrayList<OpportunityCards> CommCards) {
+		int x, y, count;
+		for(int i = 0; i < 40; i++) {
+			CardInfo card = cards.get(i);
+			count = this.position + newPos;
+			if(count >= 40) {
+				count -= 40;
+				money+=200;
+				moneyText.setText(money+"$");
+			}
+			if(count == card.id) {
+				x = card.positionX;
+				y = card.positionY;
+				GridPane.setColumnIndex(this.pawn, x);
+				GridPane.setRowIndex(this.pawn, y);
+				this.position = card.id;
+				this.recognizeCard(card, ChanceCards, CommCards);
+				return;
+			}
+		}
+	}
+	
+	public OpportunityCards getChanceCard(ArrayList<OpportunityCards> ChanceCards) {
+		Random rand = new Random();
+		int x = rand.nextInt(50);
+		x += 1;
+		return ChanceCards.get(x);
+	}
+	
+	public OpportunityCards getCommCard(ArrayList<OpportunityCards> CommCards) {
+		Random rand = new Random();
+		int x = rand.nextInt(50);
+		x += 1;
+		return CommCards.get(x);
+	}
+	
+	
 
 }
