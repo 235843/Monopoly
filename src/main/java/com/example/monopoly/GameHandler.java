@@ -8,6 +8,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.*;
+import javafx.scene.control.Button;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
@@ -212,16 +213,37 @@ public class GameHandler {
 	
 
 	public void randDice() {
+		 ObservableList<Node> childrens = gridpane.getChildren();
+		 Button butt = new Button();
+		 for (Node node : childrens) {
+			 if(node instanceof Button) {
+				 butt = (Button)node;
+			 }
+		 }
+		// new blockMove(butt, 1000).start();
 		Random rand = new Random();
 		int x = rand.nextInt(6)+1;
 		if(round % 2 == 0) {
+			if(players.get(1).prison) {
+				round++;
+				randDice();
+				return;
+			}
 			players.get(1).changePosition(x, cards, ChanceCards, CommCards);
 
 		}
 		else {
+			if(players.get(0).prison) {
+				round++;
+				randDice();
+				return;
+			}
 			players.get(0).changePosition(x, cards, ChanceCards, CommCards);
 		}
 		round++;
+		for ( int i = 0; i < 2; i++) {
+			players.get(i).prison = false;
+		}
 	}
 	
 	public void addNode(Node node, int x, int y) {

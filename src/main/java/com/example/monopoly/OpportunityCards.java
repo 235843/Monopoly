@@ -17,7 +17,7 @@ public class OpportunityCards {
 			"Idz do Instytut Fizyki. Jeśli przejdziesz przez Start, odbierz 200 $.",
 			"Bank wypłaca ci dywidendę w wysokości 50$.",
 			"Wyjdź z więzienia za darmo",
-			"Cofnij się o 3 miejsca.",
+			"Idz na start.",
 			"Idź do więzienia. Idź bezpośrednio do więzienia, nie odbierz 200$ za przejście przez Start.",
 			"Wykonaj generalne naprawy wszystkich swoich nieruchomości. Za każdą posiadłóść zapłać 25$.",
 			"Mandat za przekroczenie prędkości 15$.",
@@ -35,7 +35,7 @@ public class OpportunityCards {
 	};
 	
 	Integer chancesWhereToGo[] = {
-			20, 0, 18, 37, null, null, null, 30, null, null, 5, null, null
+			20, 0, 18, 37, null, null, 0, 30, null, null, 5, null, null
 	};
 	
 	String community[] = {

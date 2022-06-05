@@ -4,11 +4,13 @@ import java.util.ArrayList;
 import java.util.EventListener;
 import java.util.Random;
 
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -22,6 +24,7 @@ import javafx.scene.paint.Paint;
 import javafx.scene.paint.Stop;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 
@@ -36,6 +39,8 @@ public class PlayerInfo {
 	Text moneyText;
 	VBox playerVBox;
 	PlayerInfo opponent;
+	Integer freePrisonExit;
+	Boolean prison;
 
 	PlayerInfo(Integer id, Integer imgId, GridPane gridPane, VBox playerVBox){
 		this.id = id;
@@ -50,6 +55,8 @@ public class PlayerInfo {
 		this.opponent = null;
 		this.moneyText = new Text();
 		this.moneyText.setText("1500$");
+		this.freePrisonExit = 0;
+		this.prison = false;
 	}
 	
 	public void setOpponent(PlayerInfo opponent)
@@ -85,14 +92,35 @@ public class PlayerInfo {
 		return;
 	}
 
-	public void recognizeCard(CardInfo card, ArrayList<OpportunityCards> ChanceCards, ArrayList<OpportunityCards> CommCards) {
+	public void recognizeCard(CardInfo card, ArrayList<OpportunityCards> ChanceCards, ArrayList<OpportunityCards> CommCards, ArrayList<CardInfo> cards) {
 		if(playerVBox.getChildren().size() > 1) {
 			playerVBox.getChildren().remove(1);
 			playerVBox.getChildren().remove(0);
 			displayPlayer();
 			//playerVBox.getChildren().remove(2);
 		}
+		
+		if(card.id == 30) {
+			this.prison = true;
+			this.money -= 200;
+			changePosition(20, cards, ChanceCards, CommCards);
+			return;
+		}
 
+		if(opponent.playerVBox.getChildren().size() > 1) {
+			AnchorPane anchorPane = (AnchorPane) opponent.playerVBox.getChildren().get(1);
+			 ObservableList<Node> childrens = anchorPane.getChildren();
+			 Button butt = new Button();
+			 for (Node node : childrens) {
+				 if(node instanceof Button) {
+					 butt = (Button)node;
+				 }
+			 }
+			 new blockMove(butt, 50000000).start();
+		}
+		
+		
+		
 		for (CardInfo i: opponent.cardOwn) {
 			if(i.equals(card))
 			{
@@ -127,13 +155,18 @@ public class PlayerInfo {
 		Text cost = new Text();
 		Text rentCost = new Text();
 		cName.setText(card.name);
-		cName.setWrappingWidth(100);
+
+		cName.setWrappingWidth(180);
 		cName.setTextAlignment(TextAlignment.CENTER);
+		if(famId >= 0 && famId <= 7) {
+			cName.setFill(Color.WHITE);
+		}
 		aP.getChildren().add(rec);
 		aP.getChildren().add(cName);
-		aP.getChildren().get(1).setLayoutY(60);
-		aP.getChildren().get(1).setLayoutX(25);
-
+		
+		aP.getChildren().get(1).setLayoutY(20);
+		//aP.getChildren().get(1).setLayoutX(25);
+		
 
 		if(card.id==4 || card.id==39)
 		{
@@ -176,7 +209,7 @@ public class PlayerInfo {
 					money-=card.cost;
 					moneyText.setText(money+"$");
 					cardOwn.add(card);
-					
+					new blockMove(buyButton, 500000).start();
 				}
 				
 			});
@@ -199,18 +232,55 @@ public class PlayerInfo {
 			aP.getChildren().get(2).setLayoutX(25);
 			
 			if(oppCard.get == 0 && oppCard.pay == 0) {
-				buyButton.setText("OK");
+				
+				if(oppCard.prisonExit) {
+					freePrisonExit += 1;
+				}
+				else {
+					
+							if(oppCard.whereToGo > position) {
+								changePosition((oppCard.whereToGo - position), cards, ChanceCards, CommCards);		
+							}
+							else {
+								int x = 40 - position;
+								changePosition((oppCard.whereToGo + x), cards, ChanceCards, CommCards);
+							}
+						
+					
+				}
+				
 			}
 			else if(oppCard.get == 0) {
-				buyButton.setText("Pay");
+				Text text = new Text();
+				text.setText("Zapłacono "+oppCard.pay.toString()+"$");
+				text.setWrappingWidth(100);
+				text.setTextAlignment(TextAlignment.CENTER);
+				aP.getChildren().add(text);
+				aP.getChildren().get(2).setLayoutY(120);
+				aP.getChildren().get(2).setLayoutX(25);
+					this.money-=oppCard.pay;
+					this.moneyText.setText(money+"$");		
+			
+				
 			}
 			else if(oppCard.pay == 0) {
 				buyButton.setText("Get");
+				buyButton.setOnAction(new EventHandler<ActionEvent>() {
+					@Override
+					public void handle(ActionEvent actionEvent) {
+						
+						money+=oppCard.get;
+						moneyText.setText(money+"$");		
+						new blockMove(buyButton, 500000).start();
+					}
+					
+				});
+				aP.getChildren().add(buyButton);
+				aP.getChildren().get(3).setLayoutY(180);
+				aP.getChildren().get(3).setLayoutX(25);
 			}
 			
-			aP.getChildren().add(buyButton);
-			aP.getChildren().get(3).setLayoutY(140);
-			aP.getChildren().get(3).setLayoutX(25);
+			
 		}
 		
 
@@ -220,6 +290,7 @@ public class PlayerInfo {
 		playerVBox.getChildren().add(aP);
 		return;
 	}
+	
 	
 	public void changePosition(int newPos, ArrayList<CardInfo> cards, ArrayList<OpportunityCards> ChanceCards, ArrayList<OpportunityCards> CommCards) {
 		int x, y, count;
@@ -237,7 +308,7 @@ public class PlayerInfo {
 				GridPane.setColumnIndex(this.pawn, x);
 				GridPane.setRowIndex(this.pawn, y);
 				this.position = card.id;
-				this.recognizeCard(card, ChanceCards, CommCards);
+				this.recognizeCard(card, ChanceCards, CommCards, cards);
 				return;
 			}
 		}
@@ -246,14 +317,14 @@ public class PlayerInfo {
 	public OpportunityCards getChanceCard(ArrayList<OpportunityCards> ChanceCards) {
 		Random rand = new Random();
 		int x = rand.nextInt(50);
-		x += 1;
+		
 		return ChanceCards.get(x);
 	}
 	
 	public OpportunityCards getCommCard(ArrayList<OpportunityCards> CommCards) {
 		Random rand = new Random();
 		int x = rand.nextInt(50);
-		x += 1;
+		
 		return CommCards.get(x);
 	}
 	
