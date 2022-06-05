@@ -216,7 +216,6 @@ public class GameHandler {
 		int x = rand.nextInt(6)+1;
 		if(round % 2 == 0) {
 			players.get(1).changePosition(x, cards, ChanceCards, CommCards);
-			players.get(1).changePosition(x, cards);
 
 		}
 		else {
