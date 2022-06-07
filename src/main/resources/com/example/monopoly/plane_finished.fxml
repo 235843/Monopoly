@@ -50,8 +50,8 @@
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <VBox fx:id="p1" alignment="TOP_CENTER" prefHeight="750.0" prefWidth="171.0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-      <GridPane fx:id="gridpane" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="false" prefWidth="1048.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+      <VBox fx:id="p1" alignment="TOP_RIGHT" prefHeight="1042.0" prefWidth="126.0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+      <GridPane fx:id="gridpane" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
          <columnConstraints>
             <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="-Infinity" />
             <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="125.0" />
@@ -269,7 +269,7 @@
             </AnchorPane>
             <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: #ffff;" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
-                  <ImageView fitHeight="52.0" fitWidth="59.0" layoutX="12.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true" rotate="225.0">
+                  <ImageView fitHeight="56.0" fitWidth="74.0" layoutX="11.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true" rotate="225.0">
                      <image>
                         <Image url="@icons/principal.png" />
                      </image>
@@ -531,8 +531,8 @@
             </AnchorPane>
             <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: #ffff;" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
-                  <Text layoutX="18.0" layoutY="72.0" rotate="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Poprawka" textAlignment="CENTER" wrappingWidth="63.52261924743652" />
-                  <ImageView fitHeight="54.0" fitWidth="53.0" layoutX="61.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" rotate="45.0" AnchorPane.topAnchor="12.0">
+                  <Text layoutX="11.0" layoutY="82.0" rotate="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Poprawka" textAlignment="CENTER" wrappingWidth="63.52261924743652" />
+                  <ImageView fitHeight="62.0" fitWidth="66.0" layoutX="41.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true" rotate="45.0" AnchorPane.topAnchor="18.0">
                      <image>
                         <Image url="@icons/FailedTest.png" />
                      </image>
@@ -830,6 +830,6 @@
             <Button mnemonicParsing="false" onAction="#randDice" text="Button" GridPane.columnIndex="6" GridPane.rowIndex="6" />
          </children>
       </GridPane>
-      <VBox fx:id="p2" alignment="TOP_CENTER" prefHeight="750.0" prefWidth="171.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+      <VBox fx:id="p2" prefHeight="750.0" prefWidth="171.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
    </children>
 </GridPane>
