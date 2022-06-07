@@ -97,6 +97,47 @@ public class PlayerInfo {
 		return;
 	}
 
+	public void sellBuildings(Text text, AnchorPane aP, Integer pay, int anchorIndex) {
+		text.setText("Nie wystarczające środki, sprzedaj część majątku, potrzebujesz: " + pay + "$");
+		aP.getChildren().add(text);
+		aP.getChildren().get(anchorIndex).setLayoutY(120);
+		aP.getChildren().get(anchorIndex).setLayoutX(25);
+		if (this.cardOwn.isEmpty()) {
+			text.setText("Przegrałeś, nie masz środków ani majątu");
+			aP.getChildren().add(text);
+			aP.getChildren().get(2).setLayoutY(120);
+			aP.getChildren().get(2).setLayoutX(25);
+		} else {
+			int x = 2;
+			for (CardInfo ownCard : this.cardOwn) {
+				Button sellButton = new Button("Sprzedaj: " + ownCard.name + "za: " + (ownCard.cost / 2 + ownCard.rentCost / 2));
+				sellButton.setOnAction(new EventHandler<ActionEvent>() {
+					@Override
+					public void handle(ActionEvent actionEvent) {
+						money += (ownCard.cost / 2 + ownCard.rentCost / 2);
+						moneyText.setText(money.toString() + "$");
+						if (money >= pay) {
+							money -= pay;
+							moneyText.setText(money.toString() + "$");
+							opponent.money += pay;
+							opponent.moneyText.setText(opponent.money.toString() + "$");
+							Text done = new Text();
+							done.setText("Udało się zapłacić");
+							aP.getChildren().add(done);
+							aP.getChildren().get(aP.getChildren().size() - 1).setLayoutY(120);
+							aP.getChildren().remove(anchorIndex);
+						}
+						sellButton.setDisable(true);
+					}
+
+				});
+				aP.getChildren().add(sellButton);
+				x++;
+				aP.getChildren().get(x).setLayoutY(160 + (x - 2) * 25);
+			}
+		}
+	}
+
 	public void recognizeCard(CardInfo card, ArrayList<OpportunityCards> ChanceCards, ArrayList<OpportunityCards> CommCards, ArrayList<CardInfo> cards) {
 		if(playerVBox.getChildren().size() > 1) {
 			playerVBox.getChildren().remove(1);
@@ -123,9 +164,6 @@ public class PlayerInfo {
 			 }
 			 butt.setDisable(true);
 		}
-		
-		
-		
 		
 
 		//Button buyButton = new Button("Buy");
@@ -154,46 +192,7 @@ public class PlayerInfo {
 				text.setWrappingWidth(180);
 				text.setTextAlignment(TextAlignment.CENTER);
 				if(this.money < i.rentCost) {
-					text.setText("Nie wystarczające środki, sprzedaj część majątku, potrzebujesz: " + i.rentCost + "$");
-					aP.getChildren().add(text);
-					aP.getChildren().get(2).setLayoutY(120);
-					aP.getChildren().get(2).setLayoutX(25);
-					if(this.cardOwn.isEmpty()) {
-						text.setText("Przegrałeś, nie masz środków ani majątu");
-						aP.getChildren().add(text);
-						aP.getChildren().get(2).setLayoutY(120);
-						aP.getChildren().get(2).setLayoutX(25);
-					}
-					else {
-						int x = 2;
-						for(CardInfo ownCard: this.cardOwn) {
-							Button sellButton = new Button("Sprzedaj: " + ownCard.name + "za: " + (ownCard.cost/2 + ownCard.rentCost/2));
-							sellButton.setOnAction(new EventHandler<ActionEvent>() {
-								@Override
-								public void handle(ActionEvent actionEvent) {
-									money += (ownCard.cost/2 + ownCard.rentCost/2);
-									moneyText.setText(money.toString() + "$");
-									if(money >= i.rentCost) {
-										money -= i.rentCost;
-										moneyText.setText(money.toString() + "$");
-										opponent.money += i.rentCost;
-										opponent.moneyText.setText(opponent.money.toString() + "$");
-										Text done = new Text();
-										done.setText("Udało się zapłacić rachunki");
-										aP.getChildren().add(done);
-										aP.getChildren().get(aP.getChildren().size() - 1).setLayoutY(120);
-										aP.getChildren().remove(2);
-									}
-									sellButton.setDisable(true);
-								}
-								
-							});
-							aP.getChildren().add(sellButton);
-							x++;
-							aP.getChildren().get(x).setLayoutY(160 + (x-2)*25);
-						}
-						
-					}
+					sellBuildings(text, aP, i.rentCost,aP.getChildren().size());
 				}
 				else {
 					text.setText("Zapłacono: " + i.rentCost);
@@ -435,16 +434,26 @@ public class PlayerInfo {
 
 		if(card.id==4 || card.id==39)
 		{
-			money-=card.cost;
-			this.moneyText.setText(money+"$");
 			Text text = new Text();
-			text.setText("Zapłacono "+card.cost.toString()+"$");
 			text.setWrappingWidth(100);
 			text.setTextAlignment(TextAlignment.CENTER);
-			aP.getChildren().add(text);
-			aP.getChildren().get(2).setLayoutY(120);
-			aP.getChildren().get(2).setLayoutX(25);
 
+			if(money<card.cost)
+			{
+				sellBuildings(text, aP, card.cost,aP.getChildren().size());;
+			}
+			else
+			{
+				money-=card.cost;
+				this.moneyText.setText(money+"$");
+
+				text.setText("Zapłacono "+card.cost.toString()+"$");
+				aP.getChildren().add(text);
+				aP.getChildren().get(2).setLayoutY(120);
+				aP.getChildren().get(2).setLayoutX(25);
+			}
+
+			playerVBox.getChildren().add(aP);
 		}
 
 		else if(card.cost>0) {
@@ -453,7 +462,6 @@ public class PlayerInfo {
 			cost.setWrappingWidth(100);
 			cost.setTextAlignment(TextAlignment.CENTER);
 			aP.getChildren().add(cost);
-
 			aP.getChildren().get(2).setLayoutY(160);
 			aP.getChildren().get(2).setLayoutX(25);
 
@@ -512,34 +520,35 @@ public class PlayerInfo {
 					playerVBox.getChildren().add(aP);
 					
 							if(oppCard.whereToGo > position) {
-								changePosition((oppCard.whereToGo - position), cards, ChanceCards, CommCards);	
-								
+								changePosition((oppCard.whereToGo - position), cards, ChanceCards, CommCards);
 							}
 							else {
 								int x = 40 - position;
 								changePosition((oppCard.whereToGo + x), cards, ChanceCards, CommCards);
-								
 							}
-							
-							
-							
-							
 							return;
 				}
 				
 			}
+	//TUTAJ
 			else if(oppCard.get == 0) {
 				Text text = new Text();
-				text.setText("Zapłacono "+oppCard.pay.toString()+"$");
 				text.setWrappingWidth(100);
 				text.setTextAlignment(TextAlignment.CENTER);
-				aP.getChildren().add(text);
-				aP.getChildren().get(3).setLayoutY(150);
-				aP.getChildren().get(3).setLayoutX(25);
+				if(money<oppCard.pay)
+				{
+					sellBuildings(text, aP, oppCard.pay,aP.getChildren().size());
+				}
+				else
+				{
+					text.setText("Zapłacono "+oppCard.pay.toString()+"$");
+					aP.getChildren().add(text);
+					aP.getChildren().get(3).setLayoutY(150);
+					aP.getChildren().get(3).setLayoutX(25);
 					this.money-=oppCard.pay;
-					this.moneyText.setText(money+"$");		
-			
-				
+					this.moneyText.setText(money+"$");
+				}
+
 			}
 			else if(oppCard.pay == 0) {
 				buyButton.setText("Odbierz");
@@ -560,10 +569,6 @@ public class PlayerInfo {
 			
 			
 		}
-		
-
-
-
 		
 		playerVBox.getChildren().add(aP);
 		return;
