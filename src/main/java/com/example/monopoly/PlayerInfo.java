@@ -104,9 +104,6 @@ public class PlayerInfo {
 		aP.getChildren().get(anchorIndex).setLayoutX(25);
 		if (this.cardOwn.isEmpty()) {
 			text.setText("Przegrałeś, nie masz środków ani majątu");
-			aP.getChildren().add(text);
-			aP.getChildren().get(2).setLayoutY(120);
-			aP.getChildren().get(2).setLayoutX(25);
 		} else {
 			int x = 2;
 			for (CardInfo ownCard : this.cardOwn) {
@@ -115,6 +112,7 @@ public class PlayerInfo {
 					@Override
 					public void handle(ActionEvent actionEvent) {
 						money += (ownCard.cost / 2 + ownCard.rentCost / 2);
+						cardOwn.remove(ownCard);
 						moneyText.setText(money.toString() + "$");
 						if (money >= pay) {
 							money -= pay;
@@ -128,6 +126,10 @@ public class PlayerInfo {
 							aP.getChildren().remove(anchorIndex);
 						}
 						sellButton.setDisable(true);
+						if(cardOwn.size()==0)
+						{
+							text.setText("Przegrałeś, nie masz środków ani majątu");
+						}
 					}
 
 				});
@@ -199,6 +201,7 @@ public class PlayerInfo {
 					opponent.money+=i.rentCost;
 					this.money-=i.rentCost;
 					this.moneyText.setText(money+"$");
+					opponent.moneyText.setText(opponent.money + "$");
 					aP.getChildren().add(text);
 					aP.getChildren().get(2).setLayoutY(120);
 					
@@ -224,6 +227,8 @@ public class PlayerInfo {
 					buyButton.setOnAction(new EventHandler<ActionEvent>() {
 						@Override
 						public void handle(ActionEvent actionEvent) {
+							if(card.houses==4)
+								return;
 							if(card.familyId <= 1) {
 								if(money >= 50) {
 									card.houses += 1;
@@ -454,6 +459,7 @@ public class PlayerInfo {
 			}
 
 			playerVBox.getChildren().add(aP);
+			return;
 		}
 
 		else if(card.cost>0) {
