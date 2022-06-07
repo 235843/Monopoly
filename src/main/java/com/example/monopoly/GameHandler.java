@@ -121,8 +121,8 @@ public class GameHandler {
 			id++;
 		}
 
-		players.add(new PlayerInfo(0, 0, gridpane, p1));
-		players.add(new PlayerInfo(1, 1, gridpane, p2));
+		players.add(new PlayerInfo(0, 0, gridpane, p1, Color.RED));
+		players.add(new PlayerInfo(1, 1, gridpane, p2, Color.GREEN));
 		players.get(0).setOpponent(players.get(1));
 		players.get(1).setOpponent(players.get(0));
 		gridpane.add(players.get(0).pawn, 11, 11);

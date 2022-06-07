@@ -43,13 +43,13 @@ public class PlayerInfo {
 	Integer freePrisonExit;
 	Boolean prison;
 
-	PlayerInfo(Integer id, Integer imgId, GridPane gridPane, VBox playerVBox){
+	PlayerInfo(Integer id, Integer imgId, GridPane gridPane, VBox playerVBox, Color color){
 		this.id = id;
 		this.imgId = imgId;
 		this.money = 1500;
 		this.cardOwn = new ArrayList<>();
 		this.position = 0;
-		this.pawn = new Circle(11, 11, 20, Color.PINK);
+		this.pawn = new Circle(11, 11, 20, color);
 		this.pawn.setId(this.id.toString());
 		this.gridPane = gridPane;
 		this.playerVBox = playerVBox;
@@ -75,6 +75,10 @@ public class PlayerInfo {
 		if(pid<2)
 			pid+=1;
 		player.setText("Gracz " + pid);
+		if(id == 0)
+			player.setFill(Color.RED);
+		else
+			player.setFill(Color.GREEN);
 		player.setWrappingWidth(100);
 		player.setTextAlignment(TextAlignment.CENTER);
 		aP.getChildren().add(player);
