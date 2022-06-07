@@ -194,19 +194,19 @@ public class GameHandler {
 	}
 	
 	@SuppressWarnings("exports")
-	public Paint getFill (final int column, final int row, final Integer id) {
-		Rectangle result = null;
+	public String getFill (final int column, final int row, final Integer id) {
+		AnchorPane result = null;
 	    ObservableList<Node> childrens = gridpane.getChildren();
 
 	    for (Node node : childrens) {
-	        if(node instanceof Rectangle && GridPane.getRowIndex(node) == row && GridPane.getColumnIndex(node) == column) {
-	            result = (Rectangle)node;
-	            return result.getFill();
+	        if(node instanceof AnchorPane && GridPane.getRowIndex(node) == row && GridPane.getColumnIndex(node) == column) {
+	            result = (AnchorPane)node;
+	            return result.getStyle().split(";")[2].split(":")[1];
 	        }
 	        
 	    }
 
-	    return Color.YELLOW;
+	    return "-fx-fill: red;";
 	}
 	
 	
