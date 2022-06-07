@@ -28,6 +28,7 @@
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
+<?import javafx.geometry.Point3D?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -36,14 +37,10 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.LinearGradient?>
-<?import javafx.scene.paint.Stop?>
-<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="754.0" prefWidth="1309.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18" fx:controller="com.example.monopoly.GameHandler">
+<GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1042.0" prefWidth="1568.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.monopoly.GameHandler">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" />
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" />
@@ -53,524 +50,38 @@
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <VBox fx:id="p1" prefHeight="750.0" prefWidth="171.0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-      <GridPane fx:id="gridpane" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+      <VBox fx:id="p1" alignment="TOP_CENTER" prefHeight="750.0" prefWidth="171.0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+      <GridPane fx:id="gridpane" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="false" prefWidth="1048.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
          <columnConstraints>
             <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="-Infinity" />
-            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="-Infinity" />
-            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="-Infinity" />
-            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="-Infinity" />
-            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="-Infinity" />
-            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="-Infinity" />
-            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="-Infinity" />
-            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="-Infinity" />
-            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="-Infinity" />
-            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="-Infinity" />
-            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="-Infinity" />
-            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="-Infinity" />
-            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="125.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="0.0" prefWidth="90.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" />
+            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" />
+            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" />
+            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" />
+            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" />
+            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" />
+            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" />
+            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" />
+            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" prefWidth="125.0" />
          </columnConstraints>
          <rowConstraints>
             <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" valignment="CENTER" vgrow="ALWAYS" />
-            <RowConstraints maxHeight="-Infinity" valignment="CENTER" vgrow="ALWAYS" />
-            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" valignment="CENTER" vgrow="ALWAYS" />
-            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" valignment="CENTER" vgrow="ALWAYS" />
-            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" valignment="CENTER" vgrow="ALWAYS" />
-            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" valignment="CENTER" vgrow="ALWAYS" />
-            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" valignment="CENTER" vgrow="ALWAYS" />
-            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" valignment="CENTER" vgrow="ALWAYS" />
-            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" valignment="CENTER" vgrow="ALWAYS" />
-            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" valignment="CENTER" vgrow="ALWAYS" />
-            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" valignment="CENTER" vgrow="ALWAYS" />
-            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" valignment="CENTER" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="1.7976931348623157E308" valignment="CENTER" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="89.0" valignment="CENTER" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="89.0" valignment="CENTER" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="89.0" valignment="CENTER" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="89.0" valignment="CENTER" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="89.0" valignment="CENTER" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="89.0" valignment="CENTER" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="89.0" valignment="CENTER" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="89.0" valignment="CENTER" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="89.0" valignment="CENTER" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="-Infinity" prefHeight="120.0" valignment="CENTER" vgrow="ALWAYS" />
          </rowConstraints>
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
-               <fill>
-                  <LinearGradient endX="0.4928909952606635" endY="0.28016249153689915" startX="0.4928909952606635" startY="0.29911983750846305">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
-                           </color>
-                        </Stop>
-                        <Stop offset="0.006711409395973154">
-                           <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color red="0.43421053886413574" green="0.7526316046714783" blue="0.8684210777282715" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </LinearGradient>
-               </fill>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="103.0" stroke="BLACK" strokeType="INSIDE" width="107.0" GridPane.columnIndex="11" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="103.0" stroke="BLACK" strokeType="INSIDE" width="103.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
-               <fill>
-                  <LinearGradient endX="0.4928909952606635" endY="0.28016249153689915" startX="0.4928909952606635" startY="0.29911983750846305">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
-                           </color>
-                        </Stop>
-                        <Stop offset="0.006711409395973154">
-                           <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color red="0.43421053886413574" green="0.7526316046714783" blue="0.8684210777282715" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </LinearGradient>
-               </fill>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="6" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="5" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
-               <fill>
-                  <LinearGradient endX="0.4928909952606635" endY="0.28016249153689915" startX="0.4928909952606635" startY="0.29911983750846305">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
-                           </color>
-                        </Stop>
-                        <Stop offset="0.006711409395973154">
-                           <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color red="0.43421053886413574" green="0.7526316046714783" blue="0.8684210777282715" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </LinearGradient>
-               </fill>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="7" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="9" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="10" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
-               <fill>
-                  <LinearGradient endX="0.4928909952606635" endY="0.28016249153689915" startX="0.4928909952606635" startY="0.29911983750846305">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
-                           </color>
-                        </Stop>
-                        <Stop offset="0.006711409395973154">
-                           <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color red="0.5263158082962036" green="0.27810266613960266" blue="0.06091617792844772" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </LinearGradient>
-               </fill>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="8" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
-               <fill>
-                  <LinearGradient endX="0.4928909952606635" endY="0.28016249153689915" startX="0.4928909952606635" startY="0.29911983750846305">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
-                           </color>
-                        </Stop>
-                        <Stop offset="0.006711409395973154">
-                           <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color red="0.5263158082962036" green="0.27810266613960266" blue="0.06091617792844772" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </LinearGradient>
-               </fill>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="63.0" stroke="BLACK" strokeType="INSIDE" width="107.0" GridPane.columnIndex="11" GridPane.rowIndex="4" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" height="59.0" stroke="BLACK" strokeType="INSIDE" width="107.0" GridPane.columnIndex="11" GridPane.rowIndex="9">
-               <fill>
-                  <LinearGradient endX="0.3175355450236967" endY="1.0" startX="0.30331753554502366" startY="1.0">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color red="0.11089181154966354" green="0.08114035427570343" blue="0.9736841917037964" />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </LinearGradient>
-               </fill>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" height="59.0" stroke="BLACK" strokeType="INSIDE" width="106.0" GridPane.columnIndex="11" GridPane.rowIndex="8">
-               <fill>
-                  <LinearGradient endX="0.3175355450236967" endY="1.0" startX="0.30331753554502366" startY="1.0">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color red="0.11089181154966354" green="0.08114035427570343" blue="0.9736841917037964" />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </LinearGradient>
-               </fill>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" height="63.0" stroke="BLACK" strokeType="INSIDE" width="106.0" GridPane.columnIndex="11" GridPane.rowIndex="5">
-               <fill>
-                  <LinearGradient endX="0.3175355450236967" endY="1.0" startX="0.30331753554502366" startY="1.0">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color red="0.006091617979109287" green="0.6578947305679321" blue="0.21249593794345856" />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </LinearGradient>
-               </fill>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" height="59.0" stroke="BLACK" strokeType="INSIDE" width="106.0" GridPane.columnIndex="11" GridPane.rowIndex="3">
-               <fill>
-                  <LinearGradient endX="0.3175355450236967" endY="1.0" startX="0.30331753554502366" startY="1.0">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color red="0.006091617979109287" green="0.6578947305679321" blue="0.21249593794345856" />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </LinearGradient>
-               </fill>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" height="59.0" stroke="BLACK" strokeType="INSIDE" width="106.0" GridPane.columnIndex="11" GridPane.rowIndex="2">
-               <fill>
-                  <LinearGradient endX="0.3175355450236967" endY="1.0" startX="0.30331753554502366" startY="1.0">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color red="0.006091617979109287" green="0.6578947305679321" blue="0.21249593794345856" />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </LinearGradient>
-               </fill>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" stroke="BLACK" strokeType="INSIDE" width="106.0" GridPane.columnIndex="11" GridPane.rowIndex="10" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="103.0" rotate="180.0" stroke="BLACK" strokeType="INSIDE" width="106.0" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
-               <fill>
-                  <LinearGradient endX="0.4928909952606635" endY="0.7256601218686528" startX="0.4928909952606635" startY="0.7209207853757617">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
-                           </color>
-                        </Stop>
-                        <Stop offset="0.006711409395973154">
-                           <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color red="0.9736841917037964" green="0.925000011920929" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </LinearGradient>
-               </fill>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="59.0" stroke="BLACK" strokeType="INSIDE" width="106.0" GridPane.columnIndex="11" GridPane.rowIndex="6" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="63.0" stroke="BLACK" strokeType="INSIDE" width="107.0" GridPane.columnIndex="11" GridPane.rowIndex="7" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
-               <fill>
-                  <LinearGradient endX="0.4928909952606635" endY="0.7351387948544349" startX="0.4928909952606635" startY="0.7156398104265403">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
-                           </color>
-                        </Stop>
-                        <Stop offset="0.006711409395973154">
-                           <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color red="1.0" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </LinearGradient>
-               </fill>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
-               <fill>
-                  <LinearGradient endX="0.4928909952606635" endY="0.7351387948544349" startX="0.4928909952606635" startY="0.7156398104265403">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
-                           </color>
-                        </Stop>
-                        <Stop offset="0.006711409395973154">
-                           <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color red="1.0" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </LinearGradient>
-               </fill>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
-               <fill>
-                  <LinearGradient endX="0.4928909952606635" endY="0.7351387948544349" startX="0.4928909952606635" startY="0.7156398104265403">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
-                           </color>
-                        </Stop>
-                        <Stop offset="0.006711409395973154">
-                           <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color red="1.0" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </LinearGradient>
-               </fill>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="62.0" stroke="BLACK" strokeType="INSIDE" width="103.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="103.0" stroke="BLACK" strokeType="INSIDE" width="103.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" height="59.0" stroke="BLACK" strokeType="INSIDE" width="103.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-               <fill>
-                  <LinearGradient endX="0.7109004739336493" endY="1.0" startX="0.7156398104265402" startY="1.0">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color red="0.9599999785423279" green="0.5779810547828674" blue="0.20160000026226044" />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </LinearGradient>
-               </fill>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" height="59.0" stroke="BLACK" strokeType="INSIDE" width="103.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
-               <fill>
-                  <LinearGradient endX="0.7109004739336493" endY="1.0" startX="0.7156398104265402" startY="1.0">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color red="0.9599999785423279" green="0.5779810547828674" blue="0.20160000026226044" />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </LinearGradient>
-               </fill>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="59.0" stroke="BLACK" strokeType="INSIDE" width="103.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" height="62.0" stroke="BLACK" strokeType="INSIDE" width="103.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
-               <fill>
-                  <LinearGradient endX="0.7109004739336493" endY="1.0" startX="0.7156398104265402" startY="1.0">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color red="0.9599999785423279" green="0.5779810547828674" blue="0.20160000026226044" />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </LinearGradient>
-               </fill>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="59.0" stroke="BLACK" strokeType="INSIDE" width="103.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" height="59.0" stroke="BLACK" strokeType="INSIDE" width="103.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
-               <fill>
-                  <LinearGradient endX="0.7109004739336493" endY="1.0" startX="0.7156398104265402" startY="1.0">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color red="0.9599999785423279" green="0.20160000026226044" blue="0.807319700717926" />
-                           </color>
-                        </Stop>
-                        <Stop offset="0.007662835249042145">
-                           <color>
-                              <Color red="0.9599999785423279" green="0.20160000026226044" blue="0.807319700717926" />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </LinearGradient>
-               </fill>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" height="63.0" stroke="BLACK" strokeType="INSIDE" width="103.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
-               <fill>
-                  <LinearGradient endX="0.7109004739336493" endY="1.0" startX="0.7156398104265402" startY="1.0">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color red="0.9599999785423279" green="0.20160000026226044" blue="0.807319700717926" />
-                           </color>
-                        </Stop>
-                        <Stop offset="0.007662835249042145">
-                           <color>
-                              <Color red="0.9599999785423279" green="0.20160000026226044" blue="0.807319700717926" />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </LinearGradient>
-               </fill>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" height="59.0" stroke="BLACK" strokeType="INSIDE" width="103.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="9" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
-               <fill>
-                  <LinearGradient endX="0.7109004739336493" endY="1.0" startX="0.7156398104265402" startY="1.0">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color red="0.9599999785423279" green="0.20160000026226044" blue="0.807319700717926" />
-                           </color>
-                        </Stop>
-                        <Stop offset="0.007662835249042145">
-                           <color>
-                              <Color red="0.9599999785423279" green="0.20160000026226044" blue="0.807319700717926" />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </LinearGradient>
-               </fill>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
-               <fill>
-                  <LinearGradient endX="0.4928909952606635" endY="0.7256601218686528" startX="0.4928909952606635" startY="0.7209207853757617">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
-                           </color>
-                        </Stop>
-                        <Stop offset="0.006711409395973154">
-                           <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color red="0.9736841917037964" green="0.925000011920929" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </LinearGradient>
-               </fill>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" height="103.0" stroke="BLACK" strokeType="INSIDE" width="59.0" GridPane.columnIndex="8" GridPane.rowIndex="1">
-               <fill>
-                  <LinearGradient endX="0.4928909952606635" endY="0.7256601218686528" startX="0.4928909952606635" startY="0.7209207853757617">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
-                           </color>
-                        </Stop>
-                        <Stop offset="0.006711409395973154">
-                           <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color red="0.9736841917037964" green="0.925000011920929" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </LinearGradient>
-               </fill>
-            </Rectangle>
-            <Button mnemonicParsing="false" onAction="#randDice" text="Button" GridPane.columnIndex="12" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.vgrow="ALWAYS" />
-            <AnchorPane prefHeight="103.0" prefWidth="76.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: #ffff; -fx-border-color: #000000; -fx-border-width: 1px;" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
                   <Text layoutX="8.0" layoutY="40.0" rotate="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Biblioteka" textAlignment="CENTER" wrappingWidth="52.916015625" />
                   <ImageView fitHeight="51.0" fitWidth="58.0" layoutX="33.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true" rotate="135.0">
@@ -580,183 +91,183 @@
                   </ImageView>
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="96.0" prefWidth="59.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" rotate="180.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #ff0000 100.0%);" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
-                  <Text layoutX="3.0" layoutY="51.0" rotate="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Architektury Tekstyliów " textAlignment="CENTER" wrappingWidth="52.916015625">
+                  <Text layoutX="3.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Architektury Tekstyliów " textAlignment="CENTER" wrappingWidth="80.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="40.0">
                      <font>
-                        <Font size="7.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <Text layoutX="18.0" layoutY="12.0" rotate="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="220">
+                  <Text layoutX="18.0" layoutY="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="220" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="40.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <Text layoutX="33.0" layoutY="12.0" rotate="180.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER">
+                  <Text layoutX="33.0" layoutY="12.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="30.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="98.0" prefWidth="48.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" rotate="180.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: #ffff;" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
-                  <ImageView fitHeight="74.0" fitWidth="34.0" layoutX="12.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                  <ImageView fitHeight="74.0" fitWidth="34.0" layoutX="12.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="5.0">
                      <image>
                         <Image url="@icons/woman.png" />
                      </image>
                   </ImageView>
-                  <Text layoutY="19.0" rotate="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="  Mail z   Dziekanatu" textAlignment="CENTER" wrappingWidth="58.916015625">
+                  <Text layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="  Mail z   Dziekanatu" textAlignment="CENTER" wrappingWidth="58.916015625" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="65.0">
                      <font>
-                        <Font size="7.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="94.0" prefWidth="54.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" rotate="180.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #ff0000 100.0%);" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
-                  <Text layoutX="3.0" layoutY="34.0" rotate="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Materiałoznawstwa Tekstyliów i Kompozytów Polimerowych" textAlignment="CENTER" wrappingWidth="52.916015625">
+                  <Text layoutX="3.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Materiałoznawstwa Tekstyliów i Kompozytów Polimerowych" textAlignment="CENTER" wrappingWidth="80.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="40.0">
                      <font>
-                        <Font size="7.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <Text layoutX="31.0" layoutY="12.0" rotate="180.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER">
+                  <Text layoutX="31.0" layoutY="12.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="30.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <Text layoutX="12.0" layoutY="12.0" rotate="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="220" wrappingWidth="18.621093750000057">
+                  <Text layoutX="12.0" layoutY="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="220" wrappingWidth="18.621093750000057" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="40.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="103.0" prefWidth="59.0" GridPane.columnIndex="5" GridPane.rowIndex="1">
+            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" rotate="180.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #ff0000 100.0%);" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
-                  <Text layoutX="32.0" layoutY="12.0" rotate="180.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER">
+                  <Text layoutX="32.0" layoutY="12.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="30.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <Text layoutX="17.0" layoutY="12.0" rotate="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="240">
+                  <Text layoutX="17.0" layoutY="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="240" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="40.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <Text layoutX="3.0" layoutY="33.0" rotate="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Katedra Technologii Dziewiarskich i Maszyn Włókienniczych " textAlignment="CENTER" wrappingWidth="52.916015625">
+                  <Text layoutX="3.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Katedra Technologii Dziewiarskich i Maszyn Włókienniczych " textAlignment="CENTER" wrappingWidth="80.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="40.0">
                      <font>
-                        <Font size="7.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="103.0" prefWidth="59.0" GridPane.columnIndex="6" GridPane.rowIndex="1">
+            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" rotate="180.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: #ffff;" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
-                  <Text layoutX="16.0" layoutY="12.0" rotate="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="200">
+                  <Text layoutX="16.0" layoutY="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="200" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="40.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <ImageView fitHeight="40.0" fitWidth="41.0" layoutX="9.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                  <ImageView fitHeight="40.0" fitWidth="41.0" layoutX="9.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="15.0">
                      <image>
                         <Image url="@icons/languages.png" />
                      </image>
                   </ImageView>
-                  <Text layoutX="3.0" layoutY="85.0" rotate="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Centrum Językowe" textAlignment="CENTER" wrappingWidth="52.916015625">
+                  <Text layoutX="3.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Centrum Językowe" textAlignment="CENTER" wrappingWidth="52.916015625" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="60.0">
                      <font>
-                        <Font size="7.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <Text layoutX="30.0" layoutY="12.0" rotate="180.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER">
+                  <Text layoutX="30.0" layoutY="12.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="30.0">
                      <font>
-                        <Font size="8.0" />
-                     </font>
-                  </Text>
-               </children>
-            </AnchorPane>
-            <AnchorPane prefHeight="48.0" prefWidth="37.0" GridPane.columnIndex="7" GridPane.rowIndex="1">
-               <children>
-                  <Text layoutX="18.0" layoutY="12.0" rotate="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="260">
-                     <font>
-                        <Font size="8.0" />
-                     </font>
-                  </Text>
-                  <Text layoutX="4.0" layoutY="59.0" rotate="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Inżynierii Materiałowej" textAlignment="CENTER" wrappingWidth="52.916015625">
-                     <font>
-                        <Font size="7.0" />
-                     </font>
-                  </Text>
-                  <Text layoutX="33.0" layoutY="12.0" rotate="180.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER">
-                     <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="33.0" prefWidth="51.0" GridPane.columnIndex="8" GridPane.rowIndex="1">
+            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" rotate="180.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #f8ec00 100.0%);" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
-                  <Text layoutY="58.0" rotate="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Maszyn Przepływowych " textAlignment="CENTER" wrappingWidth="58.5159912109375">
+                  <Text layoutX="18.0" layoutY="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="260" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="40.0">
                      <font>
-                        <Font size="7.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <Text layoutX="19.0" layoutY="12.0" rotate="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="260">
+                  <Text layoutX="4.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Inżynierii Materiałowej" textAlignment="CENTER" wrappingWidth="80.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="40.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <Text layoutX="34.0" layoutY="12.0" rotate="180.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER">
+                  <Text layoutX="33.0" layoutY="12.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="30.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="103.0" prefWidth="57.0" GridPane.columnIndex="9" GridPane.rowIndex="1">
+            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" rotate="180.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #f8ec00 100.0%);" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
-                  <ImageView fitHeight="51.0" fitWidth="56.0" layoutX="4.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                  <Text layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Maszyn Przepływowych " textAlignment="CENTER" wrappingWidth="80.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="40.0">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="19.0" layoutY="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="260" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="40.0">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="34.0" layoutY="12.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="30.0">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" rotate="180.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: #ffff;" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <children>
+                  <ImageView fitHeight="51.0" fitWidth="56.0" layoutX="4.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="10.0">
                      <image>
                         <Image url="@icons/beer.png" />
                      </image>
                   </ImageView>
-                  <Text layoutX="3.0" layoutY="31.0" rotate="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Indeks" textAlignment="CENTER" wrappingWidth="52.916015625">
+                  <Text layoutX="3.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Indeks" textAlignment="CENTER" wrappingWidth="52.916015625" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="65.0">
                      <font>
-                        <Font size="7.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <Text layoutX="19.0" layoutY="12.0" rotate="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="150">
+                  <Text layoutX="19.0" layoutY="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="150" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="40.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <Text layoutX="34.0" layoutY="12.0" rotate="180.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER">
+                  <Text layoutX="34.0" layoutY="12.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="30.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="56.0" prefWidth="48.0" GridPane.columnIndex="10" GridPane.rowIndex="1">
+            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" rotate="180.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #f8ec00 100.0%);" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
-                  <Text layoutX="4.0" layoutY="41.0" rotate="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Katedra Automatyki, Biomechaniki i Mechatroniki" textAlignment="CENTER" wrappingWidth="50.5159912109375">
+                  <Text layoutX="4.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Katedra Automatyki, Biomechaniki i Mechatroniki" textAlignment="CENTER" wrappingWidth="80.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="40.0">
                      <font>
-                        <Font size="7.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <Text layoutX="17.0" layoutY="12.0" rotate="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="280">
+                  <Text layoutX="17.0" layoutY="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="280" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="40.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <Text layoutX="31.0" layoutY="12.0" rotate="180.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER">
+                  <Text layoutX="31.0" layoutY="12.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="30.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="103.0" prefWidth="103.0" GridPane.columnIndex="11" GridPane.rowIndex="1">
+            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: #ffff;" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
                   <ImageView fitHeight="52.0" fitWidth="59.0" layoutX="14.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true" rotate="225.0">
                      <image>
@@ -766,135 +277,83 @@
                   <Text layoutX="42.0" layoutY="30.0" rotate="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Idź na poprawkę" textAlignment="CENTER" wrappingWidth="52.916015625" />
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="51.0" prefWidth="73.0" GridPane.columnIndex="11" GridPane.rowIndex="3">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="89.0" rotate="-90.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #02a836 100.0%);" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
-                  <Text layoutX="19.0" layoutY="29.0" rotate="-90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Automatyki " textAlignment="CENTER" wrappingWidth="52.916015625">
+                  <Text layoutX="19.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Automatyki " textAlignment="CENTER" wrappingWidth="80.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="40.0">
                      <font>
-                        <Font size="7.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <Text layoutX="89.0" layoutY="29.0" rotate="-90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="300">
+                  <Text layoutX="89.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="300" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="40.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <Text layoutX="92.0" layoutY="41.0" rotate="-90.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER">
+                  <Text layoutX="92.0" layoutY="41.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="30.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="47.0" prefWidth="49.0" GridPane.columnIndex="11" GridPane.rowIndex="2">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="89.0" rotate="-90.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #02a836 100.0%);" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
-                  <Text layoutX="18.0" layoutY="29.0" rotate="-90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Elektroniki" textAlignment="CENTER" wrappingWidth="52.916015625">
+                  <Text layoutX="18.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Elektroniki" textAlignment="CENTER" wrappingWidth="80.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="40.0">
                      <font>
-                        <Font size="7.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <Text layoutX="90.0" layoutY="31.0" rotate="-90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="300">
+                  <Text layoutX="90.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="300" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="40.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <Text layoutX="93.0" layoutY="43.0" rotate="-90.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER">
+                  <Text layoutX="93.0" layoutY="43.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="30.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="63.0" prefWidth="98.0" GridPane.columnIndex="11" GridPane.rowIndex="4">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="89.0" rotate="-90.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #02a836 100.0%);" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
-                  <ImageView fitHeight="55.0" fitWidth="53.0" layoutX="9.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0">
-                     <image>
-                        <Image url="@icons/Students.png" />
-                     </image>
-                  </ImageView>
-                  <Text layoutX="51.0" layoutY="29.0" rotate="-90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pomoc starszego roku" textAlignment="CENTER" wrappingWidth="52.916046142578125">
+                  <Text layoutX="23.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Informatyki Stosowanej " textAlignment="CENTER" wrappingWidth="80.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="40.0">
                      <font>
-                        <Font size="7.0" />
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="90.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="320" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="40.0">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="93.0" layoutY="44.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="30.0">
+                     <font>
+                        <Font size="10.0" />
                      </font>
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="49.0" prefWidth="103.0" GridPane.columnIndex="11" GridPane.rowIndex="5">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="89.0" rotate="-90.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #1c15f8 100.0%);" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
-                  <Text layoutX="23.0" layoutY="25.0" rotate="-90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Informatyki Stosowanej " textAlignment="CENTER" wrappingWidth="52.916015625">
+                  <Text layoutX="89.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="350" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="40.0">
                      <font>
-                        <Font size="7.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <Text layoutX="90.0" layoutY="32.0" rotate="-90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="320">
+                  <Text layoutX="92.0" layoutY="39.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="30.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <Text layoutX="93.0" layoutY="44.0" rotate="-90.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER">
+                  <Text layoutX="16.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Fizyki" textAlignment="CENTER" wrappingWidth="80.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="40.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="32.0" prefWidth="103.0" GridPane.columnIndex="11" GridPane.rowIndex="6">
-               <children>
-                  <Text layoutX="-8.0" layoutY="23.0" rotate="-90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Centrum Technologii Informatych" textAlignment="CENTER" wrappingWidth="58.916015625">
-                     <font>
-                        <Font size="7.0" />
-                     </font>
-                  </Text>
-                  <Text layoutX="89.0" layoutY="28.0" rotate="-90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="200">
-                     <font>
-                        <Font size="8.0" />
-                     </font>
-                  </Text>
-                  <Text layoutX="92.0" layoutY="41.0" rotate="-90.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER">
-                     <font>
-                        <Font size="8.0" />
-                     </font>
-                  </Text>
-                  <ImageView fitHeight="39.0" fitWidth="53.0" layoutX="38.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0">
-                     <image>
-                        <Image url="@icons/Computer.png" />
-                     </image>
-                  </ImageView>
-               </children>
-            </AnchorPane>
-            <AnchorPane prefHeight="43.0" prefWidth="103.0" GridPane.columnIndex="11" GridPane.rowIndex="7">
-               <children>
-                  <ImageView fitHeight="62.0" fitWidth="40.0" layoutX="19.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0">
-                     <image>
-                        <Image url="@icons/woman.png" />
-                     </image>
-                  </ImageView>
-                  <Text layoutX="48.0" layoutY="30.0" rotate="-90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="  Mail z   Dziekanatu" textAlignment="CENTER" wrappingWidth="58.916015625">
-                     <font>
-                        <Font size="7.0" />
-                     </font>
-                  </Text>
-               </children>
-            </AnchorPane>
-            <AnchorPane prefHeight="59.0" prefWidth="104.0" GridPane.columnIndex="11" GridPane.rowIndex="8">
-               <children>
-                  <Text layoutX="89.0" layoutY="27.0" rotate="-90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="350">
-                     <font>
-                        <Font size="8.0" />
-                     </font>
-                  </Text>
-                  <Text layoutX="92.0" layoutY="39.0" rotate="-90.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER">
-                     <font>
-                        <Font size="8.0" />
-                     </font>
-                  </Text>
-                  <Text layoutX="16.0" layoutY="33.0" rotate="-90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Fizyki" textAlignment="CENTER" wrappingWidth="52.916015625">
-                     <font>
-                        <Font size="7.0" />
-                     </font>
-                  </Text>
-               </children>
-            </AnchorPane>
-            <AnchorPane prefHeight="52.0" prefWidth="54.0" GridPane.columnIndex="11" GridPane.rowIndex="11">
+            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: #ffff; -fx-border-color: #000000; -fx-border-width: 1px;" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
                   <ImageView fitHeight="46.0" fitWidth="44.0" layoutX="59.0" layoutY="54.0">
                      <image>
@@ -913,164 +372,164 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="38.0" prefWidth="45.0" GridPane.columnIndex="11" GridPane.rowIndex="10">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="89.0" rotate="-90.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: #ffff;" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="10" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
-                  <Text layoutX="45.0" layoutY="28.0" rotate="-90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Opłata za legitymację" textAlignment="CENTER" wrappingWidth="52.916015625">
+                  <Text layoutX="45.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Opłata za legitymację" textAlignment="CENTER" wrappingWidth="52.916015625" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="50.0">
                      <font>
-                        <Font size="7.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <ImageView fitHeight="37.0" fitWidth="75.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0">
+                  <ImageView fitHeight="37.0" fitWidth="75.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="10.0">
                      <image>
                         <Image url="@icons/ID.png" />
                      </image>
                   </ImageView>
-                  <Text layoutX="92.0" layoutY="43.0" rotate="-90.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER">
+                  <Text layoutX="92.0" layoutY="43.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="30.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <Text layoutX="89.0" layoutY="31.0" rotate="-90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100">
+                  <Text layoutX="89.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="40.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="17.0" prefWidth="50.0" GridPane.columnIndex="9" GridPane.rowIndex="11">
+            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: #ffff;" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
-                  <Text layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="  Pomoc starszego roku" textAlignment="CENTER" wrappingWidth="58.916015625">
+                  <Text layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="  Pomoc starszego roku" textAlignment="CENTER" wrappingWidth="80.0">
                      <font>
-                        <Font size="7.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <ImageView fitHeight="56.0" fitWidth="53.0" layoutX="3.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="60.0" fitWidth="80.0" layoutX="3.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
                      <image>
                         <Image url="@icons/Students.png" />
                      </image>
                   </ImageView>
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="26.0" prefWidth="40.0" GridPane.columnIndex="8" GridPane.rowIndex="11">
+            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #864710 100.0%);" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
-                  <Text layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Katedra Inżynierii Środowiska" textAlignment="CENTER" wrappingWidth="58.916015625">
+                  <Text layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Katedra Inżynierii Środowiska" textAlignment="CENTER" wrappingWidth="80.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="40.0">
                      <font>
-                        <Font name="Roboto Light" size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <Text layoutX="29.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="60">
+                  <Text layoutX="29.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="60" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="40.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <Text layoutX="21.0" layoutY="98.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER">
+                  <Text layoutX="21.0" layoutY="98.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="30.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="22.0" prefWidth="38.0" GridPane.columnIndex="7" GridPane.rowIndex="11">
+            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: #ffff;" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
-                  <Text layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Zaległe zajęcia  WF" textAlignment="CENTER" wrappingWidth="58.916015625">
+                  <Text layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Zaległe zajęcia  WF" textAlignment="CENTER" wrappingWidth="80.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="60.0">
                      <font>
-                        <Font size="7.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <ImageView fitHeight="58.0" fitWidth="46.0" layoutX="7.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="60.0" fitWidth="80.0" layoutX="7.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
                      <image>
                         <Image url="@icons/runner.png" />
                      </image>
                   </ImageView>
-                  <Text layoutX="27.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="200">
+                  <Text layoutX="27.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="200" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="40.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <Text layoutX="19.0" layoutY="98.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER">
+                  <Text layoutX="19.0" layoutY="98.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="30.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="18.0" prefWidth="43.0" GridPane.columnIndex="6" GridPane.rowIndex="11">
+            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: #ffff;" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
-                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="6.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="60.0" fitWidth="80.0" layoutX="6.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
                      <image>
                         <Image url="@icons/PE.png" />
                      </image>
                   </ImageView>
-                  <Text layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Centrum Sportu" textAlignment="CENTER" wrappingWidth="58.916015625">
+                  <Text layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Centrum Sportu" textAlignment="CENTER" wrappingWidth="80.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="60.0">
                      <font>
-                        <Font size="7.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <Text layoutX="28.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="200">
+                  <Text layoutX="28.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="200" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="40.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <Text layoutX="20.0" layoutY="98.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER">
+                  <Text layoutX="20.0" layoutY="98.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="30.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="19.0" prefWidth="39.0" GridPane.columnIndex="4" GridPane.rowIndex="11">
+            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: #ffff;" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
-                  <ImageView fitHeight="74.0" fitWidth="34.0" layoutX="14.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="60.0" fitWidth="80.0" layoutX="14.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
                      <image>
                         <Image url="@icons/woman.png" />
                      </image>
                   </ImageView>
-                  <Text layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="  Mail z   Dziekanatu" textAlignment="CENTER" wrappingWidth="58.916015625">
+                  <Text layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="  Mail z   Dziekanatu" textAlignment="CENTER" wrappingWidth="80.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="60.0">
                      <font>
-                        <Font size="7.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="32.0" prefWidth="34.0" GridPane.columnIndex="3" GridPane.rowIndex="11">
+            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #6fc0dd 100.0%);" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
-                  <Text layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Nauk Społecznych i Zarządzania Technologiami" textAlignment="CENTER" wrappingWidth="58.916015625">
+                  <Text layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Nauk Społecznych i Zarządzania Technologiami" textAlignment="CENTER" wrappingWidth="80.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="40.0">
                      <font>
-                        <Font size="7.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <Text layoutX="27.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100">
+                  <Text layoutX="27.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="40.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <Text layoutX="20.0" layoutY="98.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER">
+                  <Text layoutX="20.0" layoutY="98.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="30.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="42.0" prefWidth="35.0" GridPane.columnIndex="2" GridPane.rowIndex="11">
+            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #6fc0dd 100.0%);" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
-                  <Text layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Katedra Zarządzania Produkcją i Logistyki" textAlignment="CENTER" wrappingWidth="58.916015625">
+                  <Text layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Katedra Zarządzania Produkcją i Logistyki" textAlignment="CENTER" wrappingWidth="80.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="40.0">
                      <font>
-                        <Font size="7.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <Text layoutX="28.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="120">
+                  <Text layoutX="28.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="120" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="40.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <Text layoutX="21.0" layoutY="98.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER">
+                  <Text layoutX="21.0" layoutY="98.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="30.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="82.0" prefWidth="103.0" GridPane.columnIndex="1" GridPane.rowIndex="11">
+            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: #ffff;" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
                   <Text layoutX="6.0" layoutY="72.0" rotate="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Poprawka" textAlignment="CENTER" wrappingWidth="63.52261924743652" />
                   <ImageView fitHeight="54.0" fitWidth="53.0" layoutX="38.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" rotate="45.0">
@@ -1080,241 +539,297 @@
                   </ImageView>
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="28.0" prefWidth="39.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="89.0" rotate="90.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #f533ce 100.0%);" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="9" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
-                  <Text layoutX="31.0" layoutY="24.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Katedra Mechaniki Materiałów " textAlignment="CENTER" wrappingWidth="52.916015625">
+                  <Text layoutX="31.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Katedra Mechaniki Materiałów " textAlignment="CENTER" wrappingWidth="80.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="32.0">
                      <font>
-                        <Font size="7.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <Text layoutX="4.0" layoutY="27.0" rotate="90.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER">
+                  <Text layoutX="4.0" layoutY="27.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="40.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <Text layoutX="1.0" layoutY="39.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="140">
+                  <Text layoutX="1.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="140" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="50.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="34.0" prefWidth="40.0" GridPane.columnIndex="1" GridPane.rowIndex="10">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="89.0" rotate="90.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: #ffff;" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="10" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
-                  <ImageView fitHeight="45.0" fitWidth="57.0" layoutX="45.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+                  <ImageView fitHeight="45.0" fitWidth="57.0" layoutX="45.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="5.0">
                      <image>
                         <Image url="@icons/żappka.png" />
                      </image>
                   </ImageView>
-                  <Text layoutX="1.0" layoutY="39.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="150">
+                  <Text layoutX="1.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="150" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="40.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <Text layoutX="4.0" layoutY="27.0" rotate="90.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER">
+                  <Text strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="30.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <Text layoutX="2.0" layoutY="33.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Żappka" textAlignment="CENTER" wrappingWidth="52.916015625">
+                  <Text layoutX="16.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Żappka" textAlignment="CENTER" wrappingWidth="52.916015625" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="50.0">
                      <font>
-                        <Font size="7.0" />
-                     </font>
-                  </Text>
-               </children>
-            </AnchorPane>
-            <AnchorPane prefHeight="59.0" prefWidth="86.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
-               <children>
-                  <Text layoutX="31.0" layoutY="23.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Architektury i Urbanistyki" textAlignment="CENTER" wrappingWidth="52.916015625">
-                     <font>
-                        <Font size="7.0" />
-                     </font>
-                  </Text>
-                  <Text layoutX="5.0" layoutY="37.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="140">
-                     <font>
-                        <Font size="8.0" />
-                     </font>
-                  </Text>
-                  <Text layoutX="8.0" layoutY="25.0" rotate="90.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER">
-                     <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="54.0" prefWidth="96.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="89.0" rotate="90.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #f533ce 100.0%);" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
-                  <Text layoutX="26.0" layoutY="16.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Inżynierii Środowiska i Instalacji Budowlanych " textAlignment="CENTER" wrappingWidth="45.642181396484375">
+                  <Text layoutX="31.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Architektury i Urbanistyki" textAlignment="CENTER" wrappingWidth="80.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="32.0">
                      <font>
-                        <Font size="7.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <Text layoutX="1.0" layoutY="42.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="160">
+                  <Text layoutX="5.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="140" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="50.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <Text layoutX="4.0" layoutY="30.0" rotate="90.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER">
+                  <Text layoutX="8.0" layoutY="25.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="40.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="59.0" prefWidth="90.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="89.0" rotate="90.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #f533ce 100.0%);" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
-                  <ImageView fitHeight="47.0" fitWidth="40.0" layoutX="21.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                  <Text layoutX="26.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Inżynierii Środowiska i Instalacji Budowlanych " textAlignment="CENTER" wrappingWidth="80.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="32.0">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="1.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="160" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="50.0">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="4.0" layoutY="30.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="40.0">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="89.0" rotate="90.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: #ffff;" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <children>
+                  <ImageView fitHeight="47.0" fitWidth="40.0" layoutX="21.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="5.0">
                      <image>
                         <Image url="@icons/math.png" />
                      </image>
                   </ImageView>
-                  <Text layoutX="1.0" layoutY="42.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="200">
+                  <Text layoutX="1.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="200" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="40.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <Text layoutX="3.0" layoutY="28.0" rotate="90.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER">
+                  <Text layoutX="3.0" layoutY="28.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="30.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <Text boundsType="VISUAL" layoutX="51.0" layoutY="15.0" rotate="90.0" strokeMiterLimit="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Centrum Matematyki i Fizyki" textAlignment="CENTER" textOrigin="TOP" wrappingWidth="59.19999999999982">
+                  <Text boundsType="VISUAL" layoutX="51.0" layoutY="15.0" strokeMiterLimit="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Centrum Matematyki i Fizyki" textAlignment="CENTER" textOrigin="TOP" wrappingWidth="80.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="50.0">
                      <font>
-                        <Font size="8.0" />
-                     </font>
-                  </Text>
-               </children>
-            </AnchorPane>
-            <AnchorPane prefHeight="55.0" prefWidth="77.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
-               <children>
-                  <Text layoutX="32.0" layoutY="25.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Technologii i Analizy Żywności" textAlignment="CENTER" wrappingWidth="52.916015625">
-                     <font>
-                        <Font size="7.0" />
-                     </font>
-                  </Text>
-                  <Text layoutX="2.0" layoutY="41.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="180">
-                     <font>
-                        <Font size="8.0" />
-                     </font>
-                  </Text>
-                  <Text layoutX="4.0" layoutY="29.0" rotate="90.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER">
-                     <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="62.0" prefWidth="74.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="89.0" rotate="90.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #f59333 100.0%);" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
-                  <ImageView fitHeight="55.0" fitWidth="53.0" layoutX="45.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+                  <Text layoutX="32.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Technologii i Analizy Żywności" textAlignment="CENTER" wrappingWidth="80.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="32.0">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="2.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="180" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="50.0">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="4.0" layoutY="29.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="40.0">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="89.0" rotate="90.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: #ffff;" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <children>
+                  <ImageView fitHeight="55.0" fitWidth="53.0" layoutX="45.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="5.0">
                      <image>
                         <Image url="@icons/Students.png" />
                      </image>
                   </ImageView>
-                  <Text layoutX="2.0" layoutY="30.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pomoc starszego roku" textAlignment="CENTER" wrappingWidth="52.916046142578125">
+                  <Text layoutX="2.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pomoc starszego roku" textAlignment="CENTER" wrappingWidth="52.916046142578125" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="60.0">
                      <font>
-                        <Font size="7.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="34.0" prefWidth="56.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="89.0" rotate="90.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #f59333 100.0%);" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
-                  <Text layoutX="32.0" layoutY="23.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Katedra Biotechnologii Środowiskowej" textAlignment="CENTER" wrappingWidth="52.916015625">
+                  <Text boundsType="LOGICAL_VERTICAL_CENTER" layoutX="32.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Katedra Biotechnologii Środowiskowej" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="80.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="32.0">
                      <font>
-                        <Font size="7.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <Text layoutX="2.0" layoutY="42.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="180">
+                  <Text layoutX="2.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="180" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="50.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <Text layoutX="1.0" layoutY="29.0" rotate="90.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER" wrappingWidth="14.0">
+                  <Text layoutX="1.0" layoutY="29.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER" wrappingWidth="14.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="40.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="59.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="89.0" rotate="90.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #f59333 100.0%);" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
-                  <Text layoutX="28.0" layoutY="19.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Surowców Naturalnych i Kosmetyków" textAlignment="CENTER" wrappingWidth="52.916015625">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Surowców Naturalnych i Kosmetyków" textAlignment="CENTER" wrappingWidth="80.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="32.0">
                      <font>
-                        <Font size="7.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <Text layoutX="2.0" layoutY="43.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="200">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="200" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="50.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <Text layoutX="4.0" layoutY="30.0" rotate="90.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER">
+                  <Text strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="40.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="65.0" prefWidth="51.0" GridPane.columnIndex="10" GridPane.rowIndex="11">
+            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #864710 100.0%);" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
-                  <Text layoutX="1.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Katedra Inżynierii Bioprocesowej" textAlignment="CENTER" wrappingWidth="57.462890625">
+                  <Text layoutX="4.0" layoutY="58.8701171875" strokeType="OUTSIDE" strokeWidth="0.0" text="Katedra Inżynierii Bioprocesowej" textAlignment="CENTER" wrappingWidth="80.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="40.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="11.0" />
+                     </font>
+                     <rotationAxis>
+                        <Point3D />
+                     </rotationAxis>
+                  </Text>
+                  <Text strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="30.0">
+                     <font>
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <Text layoutX="28.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="60">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="60" textOrigin="BOTTOM" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="40.0">
                      <font>
-                        <Font size="8.0" />
-                     </font>
-                  </Text>
-                  <Text layoutX="20.0" layoutY="98.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER">
-                     <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="34.0" prefWidth="59.0" GridPane.columnIndex="5" GridPane.rowIndex="11">
+            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #6fc0dd 100.0%);" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
-                  <Text layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Katedra Zarządzania" textAlignment="CENTER" wrappingWidth="58.916015625">
+                  <Text layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Katedra Zarządzania" textAlignment="CENTER" wrappingWidth="80.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="40.0">
                      <font>
-                        <Font size="7.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <Text layoutX="27.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100">
+                  <Text layoutX="27.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="40.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <Text layoutX="19.0" layoutY="98.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER">
+                  <Text layoutX="19.0" layoutY="98.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="30.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="52.0" prefWidth="64.0" GridPane.columnIndex="11" GridPane.rowIndex="9">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="89.0" rotate="-90.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #1c15f8 100.0%);" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="9" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
-                  <Text layoutX="89.0" layoutY="30.0" rotate="-90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="400">
+                  <Text layoutX="89.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="400" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="40.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <Text layoutX="92.0" layoutY="43.0" rotate="-90.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER">
+                  <Text layoutX="92.0" layoutY="43.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="30.0">
                      <font>
-                        <Font size="8.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
-                  <Text layoutX="19.0" layoutY="28.0" rotate="-90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Matematyki " textAlignment="CENTER" wrappingWidth="52.916015625">
+                  <Text layoutX="19.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Matematyki " textAlignment="CENTER" wrappingWidth="80.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="40.0">
                      <font>
-                        <Font size="7.0" />
+                        <Font size="10.0" />
                      </font>
                   </Text>
                </children>
             </AnchorPane>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="89.0" rotate="-90.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: #ffff;" GridPane.columnIndex="11" GridPane.rowIndex="4">
+               <children>
+                  <ImageView fitHeight="55.0" fitWidth="53.0" layoutX="45.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="5.0">
+                     <image>
+                        <Image url="@icons/Students.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="2.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pomoc starszego roku" textAlignment="CENTER" wrappingWidth="52.916046142578125" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="60.0">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="89.0" rotate="-90.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: #ffff;" GridPane.columnIndex="11" GridPane.rowIndex="6">
+               <children>
+                  <Text layoutX="1.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="200" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="40.0">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="3.0" layoutY="28.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="30.0">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+                  <Text boundsType="VISUAL" layoutX="51.0" layoutY="15.0" strokeMiterLimit="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Centrum Technologii Informatych" textAlignment="CENTER" textOrigin="TOP" wrappingWidth="80.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="50.0">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="39.0" fitWidth="53.0" layoutX="16.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="5.0">
+                     <image>
+                        <Image url="@icons/Computer.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="89.0" rotate="-90.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: #ffff;" GridPane.columnIndex="11" GridPane.rowIndex="7">
+               <children>
+                  <ImageView fitHeight="60.0" fitWidth="80.0" layoutX="14.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+                     <image>
+                        <Image url="@icons/woman.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="  Mail z   Dziekanatu" textAlignment="CENTER" wrappingWidth="80.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="60.0">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <Button mnemonicParsing="false" onAction="#randDice" text="Button" GridPane.columnIndex="6" GridPane.rowIndex="6" />
          </children>
       </GridPane>
-      <VBox fx:id="p2" alignment="TOP_RIGHT" prefHeight="750.0" prefWidth="171.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+      <VBox fx:id="p2" alignment="TOP_CENTER" prefHeight="750.0" prefWidth="171.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
    </children>
 </GridPane>

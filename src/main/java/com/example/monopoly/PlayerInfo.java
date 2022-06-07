@@ -3,6 +3,7 @@ package com.example.monopoly;
 import java.util.ArrayList;
 import java.util.EventListener;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -73,7 +74,7 @@ public class PlayerInfo {
 		Integer pid = id;
 		if(pid<2)
 			pid+=1;
-		player.setText("Player " + pid);
+		player.setText("Gracz " + pid);
 		player.setWrappingWidth(100);
 		player.setTextAlignment(TextAlignment.CENTER);
 		aP.getChildren().add(player);
@@ -116,41 +117,18 @@ public class PlayerInfo {
 					 butt = (Button)node;
 				 }
 			 }
-			 new blockMove(butt, 50000000).start();
+			 butt.setDisable(true);
 		}
 		
 		
 		
-		for (CardInfo i: opponent.cardOwn) {
-			if(i.equals(card))
-			{
-				if(i.hotel==1)
-				{
-					opponent.money+=i.rentCost*7;
-					this.money-=i.rentCost*7;
-					return;
-				}
-				opponent.money+=i.rentCost*(i.houses+1);
-				this.money-=i.rentCost*(i.houses+1);
-				this.moneyText.setText(money+"$");
-				return;
-			}
-		}
+		
 
 		//Button buyButton = new Button("Buy");
 		AnchorPane aP = new AnchorPane();
 		Rectangle rec = new Rectangle(0, 0, 180, 180);
-		rec.setFill(card.fill);
+		rec.setStyle("-fx-fill:"+card.fill+";");
 		int famId = card.familyId;
-		if (famId == 2 || famId == 3) {
-			rec.setRotate(-90);
-		}
-		else if (famId == 4 || famId == 5) {
-			rec.setRotate(-180);
-		}
-		else if (famId == 6 || famId == 7) {
-			rec.setRotate(90);
-		}
 		Text cName = new Text();
 		Text cost = new Text();
 		Text rentCost = new Text();
@@ -165,8 +143,291 @@ public class PlayerInfo {
 		aP.getChildren().add(cName);
 		
 		aP.getChildren().get(1).setLayoutY(20);
-		//aP.getChildren().get(1).setLayoutX(25);
+		for (CardInfo i: opponent.cardOwn) {
+			if(i.equals(card))
+			{
+				Text text = new Text();
+				text.setWrappingWidth(180);
+				text.setTextAlignment(TextAlignment.CENTER);
+				if(this.money < i.rentCost) {
+					text.setText("Nie wystarczające środki, sprzedaj część majątku, potrzebujesz: " + i.rentCost + "$");
+					aP.getChildren().add(text);
+					aP.getChildren().get(2).setLayoutY(120);
+					aP.getChildren().get(2).setLayoutX(25);
+					if(this.cardOwn.isEmpty()) {
+						text.setText("Przegrałeś, nie masz środków ani majątu");
+						aP.getChildren().add(text);
+						aP.getChildren().get(2).setLayoutY(120);
+						aP.getChildren().get(2).setLayoutX(25);
+					}
+					else {
+						int x = 2;
+						for(CardInfo ownCard: this.cardOwn) {
+							Button sellButton = new Button("Sprzedaj: " + ownCard.name + "za: " + (ownCard.cost/2 + ownCard.rentCost/2));
+							sellButton.setOnAction(new EventHandler<ActionEvent>() {
+								@Override
+								public void handle(ActionEvent actionEvent) {
+									money += (ownCard.cost/2 + ownCard.rentCost/2);
+									moneyText.setText(money.toString() + "$");
+									if(money >= i.rentCost) {
+										money -= i.rentCost;
+										moneyText.setText(money.toString() + "$");
+										opponent.money += i.rentCost;
+										opponent.moneyText.setText(opponent.money.toString() + "$");
+										Text done = new Text();
+										done.setText("Udało się zapłacić rachunki");
+										aP.getChildren().add(done);
+										aP.getChildren().get(aP.getChildren().size() - 1).setLayoutY(120);
+										aP.getChildren().remove(2);
+									}
+									sellButton.setDisable(true);
+								}
+								
+							});
+							aP.getChildren().add(sellButton);
+							x++;
+							aP.getChildren().get(x).setLayoutY(160 + (x-2)*25);
+						}
+						
+					}
+				}
+				else {
+					text.setText("Zapłacono: " + i.rentCost);
+					opponent.money+=i.rentCost;
+					this.money-=i.rentCost;
+					this.moneyText.setText(money+"$");
+					aP.getChildren().add(text);
+					aP.getChildren().get(2).setLayoutY(120);
+					
+				}
+				playerVBox.getChildren().add(aP);
+				return;
+			}
+		}
 		
+		for (CardInfo i: cardOwn) {
+			if(i.equals(card))
+			{
+				if(card.familyId == 11) {
+					Text text = new Text();
+					text.setText("Już posiadasz tą kartę");
+					text.setWrappingWidth(180);
+					text.setTextAlignment(TextAlignment.CENTER);
+					aP.getChildren().add(text);
+					aP.getChildren().get(2).setLayoutY(60);
+				}
+				else if(card.houses < 4) {
+					Button buyButton = new Button("Kup akademik");
+					buyButton.setOnAction(new EventHandler<ActionEvent>() {
+						@Override
+						public void handle(ActionEvent actionEvent) {
+							if(card.familyId <= 1) {
+								if(money >= 50) {
+									card.houses += 1;
+									money -= 50;
+									card.rentCost += card.houses * 10;
+								}
+								else {
+									Text text = new Text();
+									text.setText("Nie wystarczające środki");
+									text.setWrappingWidth(180);
+									text.setTextAlignment(TextAlignment.CENTER);
+									aP.getChildren().add(text);
+									aP.getChildren().get(4).setLayoutY(130);
+								}
+								
+							}
+							else if (card.familyId <= 3) {
+								if(money >= 100) {
+									card.houses += 1;
+									money -= 100;
+									card.rentCost += card.houses * 25;
+								}
+								else {
+									Text text = new Text();
+									text.setText("Nie wystarczające środki");
+									text.setWrappingWidth(180);
+									text.setTextAlignment(TextAlignment.CENTER);
+									aP.getChildren().add(text);
+									aP.getChildren().get(4).setLayoutY(130);
+								}
+								
+							}
+							else if (card.familyId <= 5) {
+								if(money >= 150) {
+									card.houses += 1;
+									money -= 150;
+									card.rentCost += card.houses * 50;
+								}
+								else {
+									Text text = new Text();
+									text.setText("Nie wystarczające środki");
+									text.setWrappingWidth(180);
+									text.setTextAlignment(TextAlignment.CENTER);
+									aP.getChildren().add(text);
+									aP.getChildren().get(4).setLayoutY(130);
+								}
+								
+							}
+							else if (card.familyId <= 7) {
+								if(money >= 200) {
+									card.houses += 1;
+									money -= 200;
+									card.rentCost += card.houses * 100;
+								}
+								else {
+									Text text = new Text();
+									text.setText("Nie wystarczające środki");
+									text.setWrappingWidth(180);
+									text.setTextAlignment(TextAlignment.CENTER);
+									aP.getChildren().add(text);
+									aP.getChildren().get(4).setLayoutY(130);
+								}
+							}
+							
+							moneyText.setText(money+"$");
+							
+							new blockMove(buyButton, 500).start();
+						}
+						
+					});
+					Text housePrice = new Text();
+					
+					
+					if(card.familyId <= 1) {
+						housePrice.setText("Cena akademika: 50$");
+						
+					}
+					else if (card.familyId <= 3) {
+						housePrice.setText("Cena akademika: 100$");
+					}
+					else if (card.familyId <= 5) {
+						housePrice.setText("Cena akademika: 150$");
+					}
+					else if (card.familyId <= 7) {
+						housePrice.setText("Cena akademika: 200$");
+					}
+					
+				
+					aP.getChildren().add(buyButton);
+					aP.getChildren().get(2).setLayoutY(180);
+					aP.getChildren().get(2).setLayoutX(50);
+					aP.getChildren().add(housePrice);
+					aP.getChildren().get(3).setLayoutY(150);
+				}
+				else {
+					if(card.hotel < 2) {
+						Button buyButton = new Button("Kup prywatny akademik");
+						buyButton.setOnAction(new EventHandler<ActionEvent>() {
+							@Override
+							public void handle(ActionEvent actionEvent) {
+								
+								if(card.familyId <= 1) {
+									if(money >= 100) {
+										card.hotel += 1;
+										money -= 100;
+										card.rentCost += card.hotel * 50;
+									}
+									else {
+										Text text = new Text();
+										text.setText("Nie wystarczające środki");
+										text.setWrappingWidth(180);
+										text.setTextAlignment(TextAlignment.CENTER);
+										aP.getChildren().add(text);
+										aP.getChildren().get(4).setLayoutY(130);
+									}
+									
+								}
+								else if (card.familyId <= 3) {
+									if(money >= 200) {
+										card.hotel += 1;
+										money -= 200;
+										card.rentCost += card.hotel * 100;
+									}
+									else {
+										Text text = new Text();
+										text.setText("Nie wystarczające środki");
+										text.setWrappingWidth(180);
+										text.setTextAlignment(TextAlignment.CENTER);
+										aP.getChildren().add(text);
+										aP.getChildren().get(4).setLayoutY(130);
+									}
+									
+								}
+								else if (card.familyId <= 5) {
+									if(money >= 300) {
+										card.hotel += 1;
+										money -= 300;
+										card.rentCost += card.hotel * 150;
+									}
+									else {
+										Text text = new Text();
+										text.setText("Nie wystarczające środki");
+										text.setWrappingWidth(180);
+										text.setTextAlignment(TextAlignment.CENTER);
+										aP.getChildren().add(text);
+										aP.getChildren().get(4).setLayoutY(130);
+									}
+									
+								}
+								else if (card.familyId <= 7) {
+									if(money >= 400) {
+										card.hotel += 1;
+										money -= 400;
+										card.rentCost += card.hotel * 200;
+									}
+									else {
+										Text text = new Text();
+										text.setText("Nie wystarczające środki");
+										text.setWrappingWidth(180);
+										text.setTextAlignment(TextAlignment.CENTER);
+										aP.getChildren().add(text);
+										aP.getChildren().get(4).setLayoutY(130);
+									}
+								}
+								
+								moneyText.setText(money+"$");
+								
+								new blockMove(buyButton, 500).start();
+							}
+							
+						});
+						Text housePrice = new Text();
+						
+						
+						if(card.familyId <= 1) {
+							housePrice.setText("Cena prywatnego akademika: 100$");
+							
+						}
+						else if (card.familyId <= 3) {
+							housePrice.setText("Cena prywatnego akademika: 200$");
+						}
+						else if (card.familyId <= 5) {
+							housePrice.setText("Cena prywatnego akademika: 300$");
+						}
+						else if (card.familyId <= 7) {
+							housePrice.setText("Cena prywatnego akademika: 400$");
+						}
+						
+					
+						aP.getChildren().add(buyButton);
+						aP.getChildren().get(2).setLayoutY(180);
+						aP.getChildren().get(2).setLayoutX(50);
+						aP.getChildren().add(housePrice);
+						aP.getChildren().get(3).setLayoutY(150);
+					}
+					else {
+						Text nothinToBuy = new Text();
+						nothinToBuy.setText("Nie ma już miejsc na budowe");
+						aP.getChildren().add(nothinToBuy);
+						aP.getChildren().get(2).setLayoutY(150);
+					}
+				}
+				playerVBox.getChildren().add(aP);
+				return;
+			}
+			
+		}
 
 		if(card.id==4 || card.id==39)
 		{
@@ -183,7 +444,7 @@ public class PlayerInfo {
 		}
 
 		else if(card.cost>0) {
-			Button buyButton = new Button("Buy");
+			
 			cost.setText("Cena: "+card.cost.toString()+"$");
 			cost.setWrappingWidth(100);
 			cost.setTextAlignment(TextAlignment.CENTER);
@@ -198,37 +459,44 @@ public class PlayerInfo {
 			aP.getChildren().add(rentCost);
 			aP.getChildren().get(3).setLayoutY(140);
 			aP.getChildren().get(3).setLayoutX(25);
-
-			buyButton.setOnAction(new EventHandler<ActionEvent>() {
-				@Override
-				public void handle(ActionEvent actionEvent) {
-					for (CardInfo i: cardOwn) {
-						if(i.equals(card))
-							return;
+			if(money <= card.cost) {
+				Text noMoney = new Text();
+				noMoney.setText("Nie wystarczające środki");
+				aP.getChildren().add(noMoney);
+				aP.getChildren().get(4).setLayoutY(120);
+				aP.getChildren().get(4).setLayoutX(25);
+			}
+			else {
+				Button buyButton = new Button("Kup");
+				buyButton.setOnAction(new EventHandler<ActionEvent>() {
+					@Override
+					public void handle(ActionEvent actionEvent) {
+						for (CardInfo i: cardOwn) {
+							if(i.equals(card))
+								return;
+						}
+						money-=card.cost;
+						moneyText.setText(money+"$");
+						cardOwn.add(card);
+						buyButton.setDisable(true);
 					}
-					money-=card.cost;
-					moneyText.setText(money+"$");
-					cardOwn.add(card);
-					new blockMove(buyButton, 500000).start();
-				}
+					
+				});
 				
-			});
-			
-			aP.getChildren().add(buyButton);
-			buyButton.toFront();
-			aP.getChildren().get(4).setLayoutY(180);
-			aP.getChildren().get(4).setLayoutX(25);
+				aP.getChildren().add(buyButton);
+				aP.getChildren().get(4).setLayoutY(180);
+				aP.getChildren().get(4).setLayoutX(25);
+			}
 		}
 		
 		else if (card.familyId == 9 || card.familyId == 12) {
 			Button buyButton = new Button();
 			OpportunityCards oppCard = getChanceCard(ChanceCards);
 			cost.setText(oppCard.name);
-			cost.setWrappingWidth(100);
+			cost.setWrappingWidth(130);
 			cost.setTextAlignment(TextAlignment.CENTER);
 			aP.getChildren().add(cost);
-			aP.getChildren().get(1).setLayoutY(10);
-			aP.getChildren().get(2).setLayoutY(60);
+			aP.getChildren().get(2).setLayoutY(40);
 			aP.getChildren().get(2).setLayoutX(25);
 			
 			if(oppCard.get == 0 && oppCard.pay == 0) {
@@ -237,16 +505,22 @@ public class PlayerInfo {
 					freePrisonExit += 1;
 				}
 				else {
+					playerVBox.getChildren().add(aP);
 					
 							if(oppCard.whereToGo > position) {
-								changePosition((oppCard.whereToGo - position), cards, ChanceCards, CommCards);		
+								changePosition((oppCard.whereToGo - position), cards, ChanceCards, CommCards);	
+								
 							}
 							else {
 								int x = 40 - position;
 								changePosition((oppCard.whereToGo + x), cards, ChanceCards, CommCards);
+								
 							}
-						
-					
+							
+							
+							
+							
+							return;
 				}
 				
 			}
@@ -256,22 +530,22 @@ public class PlayerInfo {
 				text.setWrappingWidth(100);
 				text.setTextAlignment(TextAlignment.CENTER);
 				aP.getChildren().add(text);
-				aP.getChildren().get(2).setLayoutY(120);
-				aP.getChildren().get(2).setLayoutX(25);
+				aP.getChildren().get(3).setLayoutY(150);
+				aP.getChildren().get(3).setLayoutX(25);
 					this.money-=oppCard.pay;
 					this.moneyText.setText(money+"$");		
 			
 				
 			}
 			else if(oppCard.pay == 0) {
-				buyButton.setText("Get");
+				buyButton.setText("Odbierz");
 				buyButton.setOnAction(new EventHandler<ActionEvent>() {
 					@Override
 					public void handle(ActionEvent actionEvent) {
 						
 						money+=oppCard.get;
 						moneyText.setText(money+"$");		
-						new blockMove(buyButton, 500000).start();
+						buyButton.setDisable(true);
 					}
 					
 				});
@@ -294,14 +568,15 @@ public class PlayerInfo {
 	
 	public void changePosition(int newPos, ArrayList<CardInfo> cards, ArrayList<OpportunityCards> ChanceCards, ArrayList<OpportunityCards> CommCards) {
 		int x, y, count;
+		count = this.position + newPos;
+		if(count >= 40) {
+			count -= 40;
+			money+=200;
+			moneyText.setText(money+"$");
+		}
 		for(int i = 0; i < 40; i++) {
 			CardInfo card = cards.get(i);
-			count = this.position + newPos;
-			if(count >= 40) {
-				count -= 40;
-				money+=200;
-				moneyText.setText(money+"$");
-			}
+			
 			if(count == card.id) {
 				x = card.positionX;
 				y = card.positionY;
