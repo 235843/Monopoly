@@ -59,7 +59,7 @@ public class PlayerInfo {
 		this.freePrisonExit = 0;
 		this.prison = false;
 	}
-	
+
 	public void setOpponent(PlayerInfo opponent)
 	{
 		this.opponent = opponent;
@@ -154,11 +154,28 @@ public class PlayerInfo {
 			displayPlayer();
 			//playerVBox.getChildren().remove(2);
 		}
-		
+//tuuuu
 		if(card.id == 30) {
+			AnchorPane aP = new AnchorPane();
+			Text cName = new Text();
+			cName.setText(card.name);
+			cName.setWrappingWidth(180);
+			cName.setTextAlignment(TextAlignment.CENTER);
+			aP.getChildren().add(cName);
+			aP.getChildren().get(0).setLayoutY(50);
 			this.prison = true;
 			this.money -= 200;
-			changePosition(20, cards, ChanceCards, CommCards);
+			Button goButton = new Button("Idź");
+			goButton.setOnAction(new EventHandler<>() {
+				@Override
+				public void handle(ActionEvent event) {
+					changePosition(20, cards, ChanceCards, CommCards);
+				}
+			});
+			aP.getChildren().add(goButton);
+			aP.getChildren().get(1).setLayoutY(180);
+			aP.getChildren().get(1).setLayoutX(25);
+			playerVBox.getChildren().add(aP);
 			return;
 		}
 
@@ -173,7 +190,7 @@ public class PlayerInfo {
 			 }
 			 butt.setDisable(true);
 		}
-		
+
 
 		//Button buyButton = new Button("Buy");
 		AnchorPane aP = new AnchorPane();
@@ -192,7 +209,7 @@ public class PlayerInfo {
 		}
 		aP.getChildren().add(rec);
 		aP.getChildren().add(cName);
-		
+
 		aP.getChildren().get(1).setLayoutY(20);
 		for (CardInfo i: opponent.cardOwn) {
 			if(i.equals(card))
@@ -227,7 +244,7 @@ public class PlayerInfo {
 				return;
 			}
 		}
-		
+
 		for (CardInfo i: cardOwn) {
 			if(i.equals(card))
 			{
@@ -239,7 +256,7 @@ public class PlayerInfo {
 					aP.getChildren().add(text);
 					aP.getChildren().get(2).setLayoutY(60);
 				}
-				else if(card.houses < 4) {
+				else if(card.houses < 4 && !card.name.equals("Indeks") && !card.name.equals("Żabka")) {
 					Button buyButton = new Button("Kup akademik");
 					buyButton.setOnAction(new EventHandler<ActionEvent>() {
 						@Override
@@ -260,7 +277,7 @@ public class PlayerInfo {
 									aP.getChildren().add(text);
 									aP.getChildren().get(4).setLayoutY(130);
 								}
-								
+
 							}
 							else if (card.familyId <= 3) {
 								if(money >= 100) {
@@ -276,7 +293,7 @@ public class PlayerInfo {
 									aP.getChildren().add(text);
 									aP.getChildren().get(4).setLayoutY(130);
 								}
-								
+
 							}
 							else if (card.familyId <= 5) {
 								if(money >= 150) {
@@ -292,7 +309,7 @@ public class PlayerInfo {
 									aP.getChildren().add(text);
 									aP.getChildren().get(4).setLayoutY(130);
 								}
-								
+
 							}
 							else if (card.familyId <= 7) {
 								if(money >= 200) {
@@ -309,19 +326,19 @@ public class PlayerInfo {
 									aP.getChildren().get(4).setLayoutY(130);
 								}
 							}
-							
+
 							moneyText.setText(money+"$");
-							
+
 							new blockMove(buyButton, 500).start();
 						}
-						
+
 					});
 					Text housePrice = new Text();
-					
-					
+
+
 					if(card.familyId <= 1) {
 						housePrice.setText("Cena akademika: 50$");
-						
+
 					}
 					else if (card.familyId <= 3) {
 						housePrice.setText("Cena akademika: 100$");
@@ -332,8 +349,8 @@ public class PlayerInfo {
 					else if (card.familyId <= 7) {
 						housePrice.setText("Cena akademika: 200$");
 					}
-					
-				
+
+
 					aP.getChildren().add(buyButton);
 					aP.getChildren().get(2).setLayoutY(180);
 					aP.getChildren().get(2).setLayoutX(50);
@@ -341,12 +358,12 @@ public class PlayerInfo {
 					aP.getChildren().get(3).setLayoutY(150);
 				}
 				else {
-					if(card.hotel < 2) {
+					if(card.hotel < 2  && !card.name.equals("Indeks") && !card.name.equals("Żabka")) {
 						Button buyButton = new Button("Kup prywatny akademik");
 						buyButton.setOnAction(new EventHandler<ActionEvent>() {
 							@Override
 							public void handle(ActionEvent actionEvent) {
-								
+
 								if(card.familyId <= 1) {
 									if(money >= 100) {
 										card.hotel += 1;
@@ -361,7 +378,7 @@ public class PlayerInfo {
 										aP.getChildren().add(text);
 										aP.getChildren().get(4).setLayoutY(130);
 									}
-									
+
 								}
 								else if (card.familyId <= 3) {
 									if(money >= 200) {
@@ -377,7 +394,7 @@ public class PlayerInfo {
 										aP.getChildren().add(text);
 										aP.getChildren().get(4).setLayoutY(130);
 									}
-									
+
 								}
 								else if (card.familyId <= 5) {
 									if(money >= 300) {
@@ -393,7 +410,7 @@ public class PlayerInfo {
 										aP.getChildren().add(text);
 										aP.getChildren().get(4).setLayoutY(130);
 									}
-									
+
 								}
 								else if (card.familyId <= 7) {
 									if(money >= 400) {
@@ -410,19 +427,19 @@ public class PlayerInfo {
 										aP.getChildren().get(4).setLayoutY(130);
 									}
 								}
-								
+
 								moneyText.setText(money+"$");
-								
+
 								new blockMove(buyButton, 500).start();
 							}
-							
+
 						});
 						Text housePrice = new Text();
-						
-						
+
+
 						if(card.familyId <= 1) {
 							housePrice.setText("Cena prywatnego akademika: 100$");
-							
+
 						}
 						else if (card.familyId <= 3) {
 							housePrice.setText("Cena prywatnego akademika: 200$");
@@ -433,8 +450,8 @@ public class PlayerInfo {
 						else if (card.familyId <= 7) {
 							housePrice.setText("Cena prywatnego akademika: 400$");
 						}
-						
-					
+
+
 						aP.getChildren().add(buyButton);
 						aP.getChildren().get(2).setLayoutY(180);
 						aP.getChildren().get(2).setLayoutX(50);
@@ -451,7 +468,7 @@ public class PlayerInfo {
 				playerVBox.getChildren().add(aP);
 				return;
 			}
-			
+
 		}
 
 		if(card.id==4 || card.id==39)
@@ -480,7 +497,7 @@ public class PlayerInfo {
 		}
 
 		else if(card.cost>0) {
-			
+
 			cost.setText("Cena: "+card.cost.toString()+"$");
 			cost.setWrappingWidth(100);
 			cost.setTextAlignment(TextAlignment.CENTER);
@@ -515,15 +532,15 @@ public class PlayerInfo {
 						cardOwn.add(card);
 						buyButton.setDisable(true);
 					}
-					
+
 				});
-				
+
 				aP.getChildren().add(buyButton);
 				aP.getChildren().get(4).setLayoutY(180);
 				aP.getChildren().get(4).setLayoutX(25);
 			}
 		}
-		
+
 		else if (card.familyId == 9 || card.familyId == 12) {
 			Button buyButton = new Button();
 			OpportunityCards oppCard = getChanceCard(ChanceCards);
@@ -533,25 +550,53 @@ public class PlayerInfo {
 			aP.getChildren().add(cost);
 			aP.getChildren().get(2).setLayoutY(40);
 			aP.getChildren().get(2).setLayoutX(25);
-			
+
 			if(oppCard.get == 0 && oppCard.pay == 0) {
-				
+
 				if(oppCard.prisonExit) {
 					freePrisonExit += 1;
 				}
 				else {
 					playerVBox.getChildren().add(aP);
-					
+
+					ObservableList<Node> childrens = gridPane.getChildren();
+					Button butt = new Button();
+					for (Node node : childrens) {
+						if(node instanceof Button) {
+							butt = (Button)node;
+						}
+					}
 							if(oppCard.whereToGo > position) {
-								changePosition((oppCard.whereToGo - position), cards, ChanceCards, CommCards);
+								Button goButton = new Button("Idź");
+								goButton.setOnAction(new EventHandler<>() {
+									@Override
+									public void handle(ActionEvent event) {
+										changePosition((oppCard.whereToGo - position), cards, ChanceCards, CommCards);
+									}
+								});
+								aP.getChildren().add(goButton);
+								aP.getChildren().get(3).setLayoutY(180);
+								aP.getChildren().get(3).setLayoutX(25);
+								butt.setDisable(true);
+
 							}
 							else {
-								int x = 40 - position;
-								changePosition((oppCard.whereToGo + x), cards, ChanceCards, CommCards);
+								Button goButton = new Button("Idź");
+								goButton.setOnAction(new EventHandler<>() {
+									@Override
+									public void handle(ActionEvent event) {
+										int x = 40 - position;
+										changePosition((oppCard.whereToGo + x), cards, ChanceCards, CommCards);
+									}
+								});
+								aP.getChildren().add(goButton);
+								aP.getChildren().get(3).setLayoutY(180);
+								aP.getChildren().get(3).setLayoutX(25);
+
 							}
 							return;
 				}
-				
+
 			}
 	//TUTAJ
 			else if(oppCard.get == 0) {
@@ -578,26 +623,26 @@ public class PlayerInfo {
 				buyButton.setOnAction(new EventHandler<ActionEvent>() {
 					@Override
 					public void handle(ActionEvent actionEvent) {
-						
+
 						money+=oppCard.get;
-						moneyText.setText(money+"$");		
+						moneyText.setText(money+"$");
 						buyButton.setDisable(true);
 					}
-					
+
 				});
 				aP.getChildren().add(buyButton);
 				aP.getChildren().get(3).setLayoutY(180);
 				aP.getChildren().get(3).setLayoutX(25);
 			}
-			
-			
+
+
 		}
-		
+
 		playerVBox.getChildren().add(aP);
 		return;
 	}
-	
-	
+
+
 	public void changePosition(int newPos, ArrayList<CardInfo> cards, ArrayList<OpportunityCards> ChanceCards, ArrayList<OpportunityCards> CommCards) {
 		int x, y, count;
 		count = this.position + newPos;
@@ -608,7 +653,7 @@ public class PlayerInfo {
 		}
 		for(int i = 0; i < 40; i++) {
 			CardInfo card = cards.get(i);
-			
+
 			if(count == card.id) {
 				x = card.positionX;
 				y = card.positionY;
@@ -620,21 +665,21 @@ public class PlayerInfo {
 			}
 		}
 	}
-	
+
 	public OpportunityCards getChanceCard(ArrayList<OpportunityCards> ChanceCards) {
 		Random rand = new Random();
 		int x = rand.nextInt(50);
-		
+
 		return ChanceCards.get(x);
 	}
-	
+
 	public OpportunityCards getCommCard(ArrayList<OpportunityCards> CommCards) {
 		Random rand = new Random();
 		int x = rand.nextInt(50);
-		
+
 		return CommCards.get(x);
 	}
-	
-	
+
+
 
 }
