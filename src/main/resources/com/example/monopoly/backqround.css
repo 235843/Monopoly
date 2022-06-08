@@ -1,0 +1,6 @@
+.bodybg{
+ -fx-background-image: url('icons/monopoly.png');
+ -fx-background-size: 70% 42%;
+ -fx-background-repeat: no-repeat;	
+ -fx-background-position: center center;
+}

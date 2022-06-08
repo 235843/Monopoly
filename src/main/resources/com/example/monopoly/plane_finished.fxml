@@ -51,7 +51,7 @@
   </rowConstraints>
    <children>
       <VBox fx:id="p1" alignment="TOP_RIGHT" prefHeight="1042.0" prefWidth="126.0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-      <GridPane fx:id="gridpane" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+      <GridPane fx:id="gridpane" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="false" styleClass="bodybg" stylesheets="@backqround.css" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
          <columnConstraints>
             <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="-Infinity" />
             <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="125.0" />
@@ -834,7 +834,8 @@
                         <Image url="@icons/dice.png" />
                      </image>
                   </ImageView>
-               </graphic></Button>
+               </graphic>
+            </Button>
          </children>
       </GridPane>
       <VBox fx:id="p2" prefHeight="750.0" prefWidth="171.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
