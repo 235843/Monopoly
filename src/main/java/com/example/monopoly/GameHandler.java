@@ -99,25 +99,25 @@ public class GameHandler {
 		int x = 11;
 		int y = 11;
 		for(int i = x; i > 0; i--) {
-			cards.add(new CardInfo(names[id], costs[id], rentCost[id]*10000, id, famId[id], i, y, getNodeByRowColumnIndex(i, y, id), getFill(i, y, id)));
+			cards.add(new CardInfo(names[id], costs[id], rentCost[id], id, famId[id], i, y, getNodeByRowColumnIndex(i, y, id), getFill(i, y, id)));
 			id++;
 		}
 		x = 1;
 		y--;
 		for(int i = y; i > 0; i--) {
-			cards.add(new CardInfo(names[id], costs[id], rentCost[id]*10000, id, famId[id], x, i, getNodeByRowColumnIndex(x, i, id), getFill(x, i, id)));
+			cards.add(new CardInfo(names[id], costs[id], rentCost[id], id, famId[id], x, i, getNodeByRowColumnIndex(x, i, id), getFill(x, i, id)));
 			id++;
 		}
 		y = 1;
 		x = 2;
 		for(int i = x; i < 12; i++) {
-			cards.add(new CardInfo(names[id], costs[id], rentCost[id]*10000, id, famId[id], i, y, getNodeByRowColumnIndex(i, y, id), getFill(i, y, id)));
+			cards.add(new CardInfo(names[id], costs[id], rentCost[id], id, famId[id], i, y, getNodeByRowColumnIndex(i, y, id), getFill(i, y, id)));
 			id++;
 		}
 		x = 11;
 		y = 2;
 		for(int i = y; i < 11; i++) {
-			cards.add(new CardInfo(names[id], costs[id], rentCost[id]*10000, id, famId[id], x, i, getNodeByRowColumnIndex(x, i, id), getFill(x, i, id)));
+			cards.add(new CardInfo(names[id], costs[id], rentCost[id], id, famId[id], x, i, getNodeByRowColumnIndex(x, i, id), getFill(x, i, id)));
 			id++;
 		}
 
