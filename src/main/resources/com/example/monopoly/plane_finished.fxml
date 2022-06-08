@@ -827,7 +827,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <Button mnemonicParsing="false" onAction="#randDice" GridPane.columnIndex="6" GridPane.rowIndex="6">
+            <Button mnemonicParsing="false" onAction="#randDice" style="-fx-background-color: transparent;" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
                <graphic>
                   <ImageView fitHeight="67.0" fitWidth="65.0">
                      <image>
