@@ -24,6 +24,7 @@ public class GameHandler {
 	ArrayList<PlayerInfo> players = new ArrayList<PlayerInfo>();
 	ArrayList<OpportunityCards> ChanceCards = new ArrayList<OpportunityCards>();
 	ArrayList<OpportunityCards> CommCards = new ArrayList<OpportunityCards>();
+	Text text = new Text();
 	@FXML
     private GridPane gridpane;
 	@FXML
@@ -137,7 +138,8 @@ public class GameHandler {
 			CommCards.add(new OpportunityCards(false));
 		}
 	
-	
+		text.setText("Ruch gracza: 1");
+		gridpane.add(text, 6, 3);
 	
 
 		players.get(0).displayPlayer();
@@ -191,7 +193,9 @@ public class GameHandler {
 				 butt = (Button)node;
 			 }
 		 }
-		// new blockMove(butt, 1000).start();
+		new blockMove(butt, 1000).start();
+		
+		
 		Random rand = new Random();
 		int x = rand.nextInt(6)+1;
 		if(round % 2 == 0) {
@@ -201,6 +205,7 @@ public class GameHandler {
 				return;
 			}
 			players.get(1).changePosition(x, cards, ChanceCards, CommCards);
+			text.setText("Ruch gracza: 1");
 
 		}
 		else {
@@ -210,7 +215,9 @@ public class GameHandler {
 				return;
 			}
 			players.get(0).changePosition(x, cards, ChanceCards, CommCards);
+			text.setText("Ruch gracza: 2");
 		}
+		
 		round++;
 		for ( int i = 0; i < 2; i++) {
 			players.get(i).prison = false;
