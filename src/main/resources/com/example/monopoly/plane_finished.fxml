@@ -50,7 +50,7 @@
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <VBox fx:id="p1" alignment="TOP_RIGHT" prefHeight="1042.0" prefWidth="126.0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+      <VBox fx:id="p1" alignment="TOP_CENTER" maxWidth="200.0" prefHeight="1042.0" prefWidth="200.0" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
       <GridPane fx:id="gridpane" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="false" styleClass="bodybg" stylesheets="@backqround.css" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
          <columnConstraints>
             <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="-Infinity" />
@@ -838,6 +838,6 @@
             </Button>
          </children>
       </GridPane>
-      <VBox fx:id="p2" prefHeight="750.0" prefWidth="171.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+      <VBox fx:id="p2" alignment="TOP_CENTER" maxWidth="200.0" prefHeight="750.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
    </children>
 </GridPane>

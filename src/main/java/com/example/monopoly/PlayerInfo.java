@@ -70,11 +70,16 @@ public class PlayerInfo {
 		AnchorPane aP = new AnchorPane();
 
 		Text player = new Text();
+		Font font = new Font(20);
+		moneyText.setFont(font);
 		Text money = moneyText;
+		
 		Integer pid = id;
 		if(pid<2)
 			pid+=1;
 		player.setText("Gracz " + pid);
+		font.font(25);
+		player.setFont(font);
 		if(id == 0)
 			player.setFill(Color.RED);
 		else
@@ -107,7 +112,7 @@ public class PlayerInfo {
 		} else {
 			int x = 2;
 			for (CardInfo ownCard : this.cardOwn) {
-				Button sellButton = new Button("Sprzedaj: " + ownCard.name + "za: " + (ownCard.cost / 2 + ownCard.rentCost / 2));
+				Button sellButton = new Button("Sprzedaj: " + ownCard.name + " za: " + (ownCard.cost / 2 + ownCard.rentCost / 2));
 				sellButton.setOnAction(new EventHandler<ActionEvent>() {
 					@Override
 					public void handle(ActionEvent actionEvent) {
@@ -133,6 +138,8 @@ public class PlayerInfo {
 					}
 
 				});
+				sellButton.maxWidth(180);
+				sellButton.prefWidth(180);
 				aP.getChildren().add(sellButton);
 				x++;
 				aP.getChildren().get(x).setLayoutY(160 + (x - 2) * 25);
@@ -190,10 +197,20 @@ public class PlayerInfo {
 		for (CardInfo i: opponent.cardOwn) {
 			if(i.equals(card))
 			{
+				
+				ObservableList<Node> childrens = gridPane.getChildren();
+				 Button butt = new Button();
+				 for (Node node : childrens) {
+					 if(node instanceof Button) {
+						 butt = (Button)node;
+					 }
+				 }	
 				Text text = new Text();
 				text.setWrappingWidth(180);
 				text.setTextAlignment(TextAlignment.CENTER);
 				if(this.money < i.rentCost) {
+					
+					butt.setDisable(true);
 					sellBuildings(text, aP, i.rentCost,aP.getChildren().size());
 				}
 				else {
@@ -204,7 +221,7 @@ public class PlayerInfo {
 					opponent.moneyText.setText(opponent.money + "$");
 					aP.getChildren().add(text);
 					aP.getChildren().get(2).setLayoutY(120);
-					
+					butt.setDisable(false);
 				}
 				playerVBox.getChildren().add(aP);
 				return;
