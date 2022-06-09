@@ -55,7 +55,7 @@
          <columnConstraints>
             <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="-Infinity" />
             <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="125.0" />
-            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="0.0" prefWidth="90.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="0.0" />
             <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" />
             <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" />
             <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" />
@@ -81,7 +81,7 @@
             <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" valignment="CENTER" vgrow="ALWAYS" />
          </rowConstraints>
          <children>
-            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: #ffff; -fx-border-color: #000000; -fx-border-width: 1px;" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="135.0" prefWidth="125.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: #ffff; -fx-border-color: #000000; -fx-border-width: 1px;" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
                   <Text layoutX="13.0" layoutY="56.0" rotate="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Biblioteka" textAlignment="CENTER" wrappingWidth="52.916015625" />
                   <ImageView fitHeight="51.0" fitWidth="58.0" layoutX="45.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true" rotate="135.0">
@@ -91,7 +91,7 @@
                   </ImageView>
                </children>
             </AnchorPane>
-            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" rotate="180.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #ff0000 100.0%);" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="135.0" prefWidth="85.0" rotate="180.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #ff0000 100.0%);" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
                   <Text layoutX="3.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Architektury Tekstyliów " textAlignment="CENTER" wrappingWidth="80.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="40.0">
                      <font>
@@ -110,7 +110,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" rotate="180.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: #ffff;" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="135.0" prefWidth="85.0" rotate="180.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: #ffff;" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
                   <ImageView fitHeight="74.0" fitWidth="34.0" layoutX="12.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="5.0">
                      <image>
@@ -124,7 +124,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" rotate="180.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #ff0000 100.0%);" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="135.0" prefWidth="85.0" rotate="180.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #ff0000 100.0%);" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
                   <Text layoutX="3.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Materiałoznawstwa Tekstyliów i Kompozytów Polimerowych" textAlignment="CENTER" wrappingWidth="80.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="40.0">
                      <font>
@@ -143,7 +143,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" rotate="180.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #ff0000 100.0%);" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="135.0" prefWidth="85.0" rotate="180.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #ff0000 100.0%);" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
                   <Text layoutX="32.0" layoutY="12.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="30.0">
                      <font>
@@ -162,7 +162,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="134.0" prefWidth="78.0" rotate="180.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: #ffff;" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="135.0" prefWidth="85.0" rotate="180.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: #ffff;" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
                   <Text layoutX="16.0" layoutY="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="200" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="40.0">
                      <font>
@@ -186,7 +186,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" rotate="180.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #f8ec00 100.0%);" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="135.0" prefWidth="85.0" rotate="180.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #f8ec00 100.0%);" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
                   <Text layoutX="18.0" layoutY="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="260" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="40.0">
                      <font>
@@ -205,7 +205,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" rotate="180.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #f8ec00 100.0%);" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="135.0" prefWidth="85.0" rotate="180.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #f8ec00 100.0%);" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
                   <Text layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Maszyn Przepływowych " textAlignment="CENTER" wrappingWidth="80.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="40.0">
                      <font>
@@ -224,7 +224,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" rotate="180.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: #ffff;" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="135.0" prefWidth="85.0" rotate="180.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: #ffff;" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
                   <ImageView fitHeight="51.0" fitWidth="56.0" layoutX="4.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="10.0">
                      <image>
@@ -248,7 +248,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" rotate="180.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #f8ec00 100.0%);" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="135.0" prefWidth="85.0" rotate="180.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #f8ec00 100.0%);" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
                   <Text layoutX="4.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Katedra Automatyki, Biomechaniki i Mechatroniki" textAlignment="CENTER" wrappingWidth="80.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="40.0">
                      <font>
@@ -396,7 +396,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: #ffff;" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="135.0" prefWidth="85.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: #ffff;" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
                   <Text layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="  Pomoc starszego roku" textAlignment="CENTER" wrappingWidth="80.0">
                      <font>
@@ -410,7 +410,7 @@
                   </ImageView>
                </children>
             </AnchorPane>
-            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #864710 100.0%);" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="135.0" prefWidth="85.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #864710 100.0%);" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
                   <Text layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Katedra Inżynierii Środowiska" textAlignment="CENTER" wrappingWidth="80.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="40.0">
                      <font>
@@ -429,7 +429,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: #ffff;" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="135.0" prefWidth="85.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: #ffff;" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
                   <Text layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Zaległe zajęcia  WF" textAlignment="CENTER" wrappingWidth="80.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="60.0">
                      <font>
@@ -453,7 +453,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefWidth="82.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: #ffff;" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="135.0" prefWidth="85.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: #ffff;" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
                   <ImageView fitHeight="60.0" fitWidth="80.0" layoutX="6.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
                      <image>
@@ -477,7 +477,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: #ffff;" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="135.0" prefWidth="85.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: #ffff;" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
                   <ImageView fitHeight="60.0" fitWidth="80.0" layoutX="14.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
                      <image>
@@ -491,7 +491,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #6fc0dd 100.0%);" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="135.0" prefWidth="85.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #6fc0dd 100.0%);" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
                   <Text layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Nauk Społecznych i Zarządzania Technologiami" textAlignment="CENTER" wrappingWidth="80.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="40.0">
                      <font>
@@ -510,7 +510,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #6fc0dd 100.0%);" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="135.0" prefWidth="85.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #6fc0dd 100.0%);" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
                   <Text layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Katedra Zarządzania Produkcją i Logistyki" textAlignment="CENTER" wrappingWidth="80.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="40.0">
                      <font>
@@ -529,7 +529,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: #ffff;" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="135.0" prefWidth="125.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: #ffff;" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
                   <Text layoutX="11.0" layoutY="82.0" rotate="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Poprawka" textAlignment="CENTER" wrappingWidth="63.52261924743652" />
                   <ImageView fitHeight="62.0" fitWidth="66.0" layoutX="41.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true" rotate="45.0" AnchorPane.topAnchor="18.0">
@@ -539,7 +539,7 @@
                   </ImageView>
                </children>
             </AnchorPane>
-            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="83.0" rotate="90.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #f533ce 100.0%);" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="9" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="85.0" rotate="90.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #f533ce 100.0%);" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="9" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
                   <Text layoutX="31.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Katedra Mechaniki Materiałów " textAlignment="CENTER" wrappingWidth="80.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="32.0">
                      <font>
@@ -558,7 +558,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="83.0" rotate="90.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: #ffff;" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="10" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="85.0" rotate="90.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: #ffff;" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="10" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
                   <ImageView fitHeight="45.0" fitWidth="57.0" layoutX="45.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="5.0">
                      <image>
@@ -582,7 +582,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="83.0" rotate="90.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #f533ce 100.0%);" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="85.0" rotate="90.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #f533ce 100.0%);" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
                   <Text layoutX="31.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Architektury i Urbanistyki" textAlignment="CENTER" wrappingWidth="80.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="32.0">
                      <font>
@@ -601,7 +601,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="83.0" rotate="90.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #f533ce 100.0%);" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="85.0" rotate="90.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #f533ce 100.0%);" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
                   <Text layoutX="26.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Inżynierii Środowiska i Instalacji Budowlanych " textAlignment="CENTER" wrappingWidth="80.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="32.0">
                      <font>
@@ -620,7 +620,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="83.0" rotate="90.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: #ffff;" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="85.0" rotate="90.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: #ffff;" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
                   <ImageView fitHeight="47.0" fitWidth="40.0" layoutX="21.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="5.0">
                      <image>
@@ -644,7 +644,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="83.0" rotate="90.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #f59333 100.0%);" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="85.0" rotate="90.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #f59333 100.0%);" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
                   <Text layoutX="32.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Technologii i Analizy Żywności" textAlignment="CENTER" wrappingWidth="80.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="32.0">
                      <font>
@@ -663,7 +663,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="83.0" rotate="90.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: #ffff;" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="85.0" rotate="90.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: #ffff;" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
                   <ImageView fitHeight="55.0" fitWidth="53.0" layoutX="45.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="5.0">
                      <image>
@@ -677,7 +677,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="83.0" rotate="90.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #f59333 100.0%);" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="85.0" rotate="90.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #f59333 100.0%);" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
                   <Text boundsType="LOGICAL_VERTICAL_CENTER" layoutX="32.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Katedra Biotechnologii Środowiskowej" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="80.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="32.0">
                      <font>
@@ -696,7 +696,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="83.0" rotate="90.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #f59333 100.0%);" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="85.0" rotate="90.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #f59333 100.0%);" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Instytut Surowców Naturalnych i Kosmetyków" textAlignment="CENTER" wrappingWidth="80.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="32.0">
                      <font>
@@ -715,7 +715,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #864710 100.0%);" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="135.0" prefWidth="85.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #864710 100.0%);" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
                   <Text layoutX="4.0" layoutY="58.8701171875" strokeType="OUTSIDE" strokeWidth="0.0" text="Katedra Inżynierii Bioprocesowej" textAlignment="CENTER" wrappingWidth="80.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="40.0">
                      <font>
@@ -737,7 +737,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #6fc0dd 100.0%);" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="135.0" prefWidth="85.0" style="-fx-border-color: #000000; -fx-border-width: 1px; -fx-background-color: linear-gradient(from 49.2891% 29.912% to 49.2891% 28.0162%, #ffffff 0.0%, #ffffff 0.6711%, #6fc0dd 100.0%);" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
                   <Text layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Katedra Zarządzania" textAlignment="CENTER" wrappingWidth="80.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="40.0">
                      <font>

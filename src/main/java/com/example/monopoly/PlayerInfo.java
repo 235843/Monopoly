@@ -42,6 +42,7 @@ public class PlayerInfo {
 	PlayerInfo opponent;
 	Integer freePrisonExit;
 	Boolean prison;
+	Color color;
 
 	PlayerInfo(Integer id, Integer imgId, GridPane gridPane, VBox playerVBox, Color color){
 		this.id = id;
@@ -58,6 +59,7 @@ public class PlayerInfo {
 		this.moneyText.setText("1500$");
 		this.freePrisonExit = 0;
 		this.prison = false;
+		this.color = color;
 	}
 
 	public void setOpponent(PlayerInfo opponent)
@@ -106,11 +108,13 @@ public class PlayerInfo {
 		text.setText("Nie wystarczające środki, sprzedaj część majątku, potrzebujesz: " + pay + "$");
 		aP.getChildren().add(text);
 		aP.getChildren().get(anchorIndex).setLayoutY(120);
-		aP.getChildren().get(anchorIndex).setLayoutX(25);
+		aP.getChildren().get(anchorIndex).setLayoutY(25);
 		if (this.cardOwn.isEmpty()) {
 			text.setText("Przegrałeś, nie masz środków ani majątu");
 		} else {
 			int x = 2;
+			VBox vbox = new VBox();
+			
 			for (CardInfo ownCard : this.cardOwn) {
 				Button sellButton = new Button("Sprzedaj: " + ownCard.name + " za: " + (ownCard.cost / 2 + ownCard.rentCost / 2));
 				sellButton.setOnAction(new EventHandler<ActionEvent>() {
@@ -119,6 +123,20 @@ public class PlayerInfo {
 						money += (ownCard.cost / 2 + ownCard.rentCost / 2);
 						cardOwn.remove(ownCard);
 						moneyText.setText(money.toString() + "$");
+						
+						AnchorPane result = null;
+					    ObservableList<Node> childrens = gridPane.getChildren();
+
+					    for (Node node : childrens) {
+					        if(node instanceof AnchorPane && GridPane.getRowIndex(node) == ownCard.positionY && GridPane.getColumnIndex(node) == ownCard.positionX) {
+					            result = (AnchorPane)node;
+					            result.getChildren().remove(result.getChildren().size() - 1);
+					            break;
+					        }
+					        
+					    }
+
+						
 						if (money >= pay) {
 							money -= pay;
 							moneyText.setText(money.toString() + "$");
@@ -138,12 +156,17 @@ public class PlayerInfo {
 					}
 
 				});
-				sellButton.maxWidth(180);
-				sellButton.prefWidth(180);
-				aP.getChildren().add(sellButton);
-				x++;
-				aP.getChildren().get(x).setLayoutY(160 + (x - 2) * 25);
+				sellButton.setWrapText(true);
+				sellButton.setMaxWidth(180);
+				sellButton.setPrefWidth(180);
+				sellButton.setMaxHeight(60);
+				vbox.getChildren().add(sellButton);
+				
+				//x++;
+				//aP.getChildren().get(x).setLayoutY(160 + (x - 2) * 60);
 			}
+			aP.getChildren().add(vbox);
+			aP.getChildren().get(aP.getChildren().size() - 1).setLayoutY(180);
 		}
 	}
 
@@ -154,7 +177,7 @@ public class PlayerInfo {
 			displayPlayer();
 			//playerVBox.getChildren().remove(2);
 		}
-//tuuuu
+
 		if(card.id == 30) {
 			AnchorPane aP = new AnchorPane();
 			Text cName = new Text();
@@ -496,7 +519,7 @@ public class PlayerInfo {
 			return;
 		}
 
-		else if(card.cost>0) {
+		else if(card.cost > 0) {
 
 			cost.setText("Cena: "+card.cost.toString()+"$");
 			cost.setWrappingWidth(100);
@@ -531,6 +554,24 @@ public class PlayerInfo {
 						moneyText.setText(money+"$");
 						cardOwn.add(card);
 						buyButton.setDisable(true);
+						
+						
+						AnchorPane result = null;
+					    ObservableList<Node> childrens = gridPane.getChildren();
+
+					    for (Node node : childrens) {
+					        if(node instanceof AnchorPane && GridPane.getRowIndex(node) == card.positionY && GridPane.getColumnIndex(node) == card.positionX) {
+					            result = (AnchorPane)node;
+					            double width = result.getWidth();
+								double height = result.getHeight();
+								Rectangle rec = new Rectangle(width, height);
+								rec.setFill(color.deriveColor(1, 1, 1, 0.15));
+					            result.getChildren().add(rec);
+					            break;
+					        }
+					        
+					    }
+						
 					}
 
 				});
