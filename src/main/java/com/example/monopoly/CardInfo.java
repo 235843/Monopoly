@@ -2,6 +2,7 @@ package com.example.monopoly;
 
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Paint;
+import javafx.scene.text.Text;
 
 public class CardInfo {
 	String name;

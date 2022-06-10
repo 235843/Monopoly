@@ -15,6 +15,8 @@ import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
@@ -353,6 +355,29 @@ public class PlayerInfo {
 							moneyText.setText(money+"$");
 
 							new blockMove(buyButton, 500).start();
+
+							AnchorPane result = null;
+							ObservableList<Node> childrens = gridPane.getChildren();
+
+							for (Node node : childrens) {
+								if(node instanceof AnchorPane && GridPane.getRowIndex(node) == card.positionY && GridPane.getColumnIndex(node) == card.positionX) {
+									result = (AnchorPane)node;
+									if(result.getChildren().size()>4)
+										result.getChildren().remove(4);
+
+									Text text = new Text();
+									text.setTextAlignment(TextAlignment.CENTER);
+									if(card.houses==1)
+										text.setText(card.houses + " Akademik");
+									else
+										text.setText(card.houses + " Akademiki");
+									result.getChildren().add(text);
+									result.getChildren().get(result.getChildren().size()-1).setLayoutX(10);
+									result.getChildren().get(result.getChildren().size()-1).setLayoutY(15);
+									break;
+								}
+
+							}
 						}
 
 					});
@@ -452,6 +477,27 @@ public class PlayerInfo {
 								}
 
 								moneyText.setText(money+"$");
+
+								AnchorPane result = null;
+								ObservableList<Node> childrens = gridPane.getChildren();
+
+								for (Node node : childrens) {
+									if(node instanceof AnchorPane && GridPane.getRowIndex(node) == card.positionY && GridPane.getColumnIndex(node) == card.positionX) {
+										result = (AnchorPane)node;
+										if(result.getChildren().size()>4)
+											result.getChildren().remove(4);
+
+										Text text = new Text();
+										text.setTextAlignment(TextAlignment.CENTER);
+										text.setWrappingWidth(100);
+										text.setText("Prywatny\nakademik");
+										result.getChildren().add(text);
+										result.getChildren().get(result.getChildren().size()-1).setLayoutX(10);
+										result.getChildren().get(result.getChildren().size()-1).setLayoutY(10);
+										break;
+									}
+
+								}
 
 								new blockMove(buyButton, 500).start();
 							}
